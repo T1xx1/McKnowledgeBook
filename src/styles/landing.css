@@ -1,0 +1,8 @@
+a.sl-link-button.primary {
+   font-weight: 500;
+
+   &:hover svg {
+      transition: all cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+      transform: translateX(2px);
+   }
+}

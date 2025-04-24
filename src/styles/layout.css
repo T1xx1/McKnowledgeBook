@@ -1,0 +1,9 @@
+:root {
+   --sl-color-black: var(--color-black);
+   --sl-color-white: var(--color-white);
+
+   --sl-color-accent: var(--color-secondary);
+   --sl-color-accent-high: var(--color-primary);
+
+   --sl-font-system: var(--font-roboto);
+}
