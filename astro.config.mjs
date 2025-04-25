@@ -15,9 +15,9 @@ export default defineConfig({
          description: 'The Minecraft modding knowledge book',
          social: [
             {
+               icon: 'github',
                label: 'GitHub',
-               href: 'https://github.com/modpackker/mcknowledgebook',
-               icon: 'github'
+               href: 'https://github.com/modpackker/mcknowledgebook'
             }
          ],
          sidebar: [
