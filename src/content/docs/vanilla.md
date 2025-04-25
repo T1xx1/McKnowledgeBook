@@ -1,0 +1,5 @@
+---
+title: Vanilla
+aliases:
+  - Vanilla
+---
