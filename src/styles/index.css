@@ -1,5 +1,13 @@
-@import url('./theme.css');
+@layer base, starlight, theme, components, utilities;
 
-@import url('./layout.css');
+@import '@astrojs/starlight-tailwind';
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
 
-@import url('./landing.css');
+/*  */
+
+@import './theme.css';
+
+@import './layout.css';
+
+@import './landing.css';
