@@ -7,7 +7,7 @@ settings:
 importers:
 
   .:
-    dependencies:
+    devDependencies:
       '@astrojs/starlight':
         specifier: ^0.34.1
         version: 0.34.1(astro@5.7.5(rollup@4.40.0)(typescript@5.8.3))
