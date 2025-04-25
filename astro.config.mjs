@@ -13,7 +13,7 @@ export default defineConfig({
          logo: {
             src: './src/assets/favicon.webp'
          },
-         description: 'The Minecraft modding knowledge book',
+         description: 'Docs for Minecraft content',
          social: [
             {
                icon: 'github',
