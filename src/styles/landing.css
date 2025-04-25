@@ -1,7 +1,0 @@
-a.sl-link-button.primary {
-   @apply font-semibold;
-
-   &:hover svg {
-      @apply transition-all translate-x-1;
-   }
-}

@@ -1,0 +1,11 @@
+a.site-title {
+   @apply gap-2.5 transition-all hover:translate-y-[-2px];
+}
+
+.hero a.sl-link-button.primary {
+   @apply font-semibold;
+
+   &:hover svg {
+      @apply transition-all translate-x-1;
+   }
+}
