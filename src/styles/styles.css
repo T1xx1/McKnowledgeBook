@@ -1,7 +1,9 @@
+/* header title animation */
 a.site-title {
-   @apply gap-2.5 transition-all hover:translate-y-[-2px];
+   @apply gap-2.5 transition-all hover:translate-y-[-3px];
 }
 
+/* landing primary button animation */
 .hero a.sl-link-button.primary {
    @apply font-semibold;
 
