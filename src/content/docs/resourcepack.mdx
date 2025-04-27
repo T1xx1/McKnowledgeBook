@@ -1,0 +1,37 @@
+---
+title: Resource pack
+aliases:
+  - Resource pack
+  - Resource packs
+  - Texture pack
+  - Texture packs
+lastUpdated: 2025-04-26
+---
+
+Resource packs are a [Project type](./projecttype) that allow players to change the aspect of every texture in [Minecraft](/minecraft) without writing code also allowing for more complex cases like animations, randomness, and weighted targeted entity changes.
+
+## [Version](/versions)
+Resource packs are often designed to match specific Minecraft version.
+Minecraft updates may introduce new or change current blocks, textures, or mechanics that may not be compatible with older resource packs, but it will only result in the non compatible things rendering the default textures instead of the ones specified in the resource pack and it will not cause any problems, so it's safe to treat resource pack versions as an indicator to "works the best with" and not an actual requirement for the pack to work differently from [Mods](/mod) where the version is an actual requirement and Minecraft won't load and throw random errors if it's not right.
+
+:::note
+Minecraft will still warn you if you try to enable a resource pack with the wrong version
+
+![](../assets/deprecatedresourcepackwarning.png)
+
+This alert cannot be turned off but it can be bypassed with [No Resource Pack Warnings](https://modrinth.com/mod/no-resource-pack-warnings)
+:::
+
+## [Server](/server) resource packs
+It's possibile to load resource packs on a [Server](/server) so every player will have the same resource packs when they join without needing to install them on their [Client](/client).
+
+:::danger[Important]
+Despite being saved on the [Server](/server) these resource packs don't run on the server. When a player joins the server and requests the world data from it, resource packs will be streamed to the player's [Client](/client) and only run on it.
+
+Resource packs should only be tested for [Client](/client) side [Environment](/environment).
+:::
+
+---
+
+### Resources
+> [Resource pack – Minecraft Wiki](https://minecraft.fandom.com/wiki/Resource_pack)

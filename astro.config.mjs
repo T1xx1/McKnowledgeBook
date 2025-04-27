@@ -22,7 +22,68 @@ export default defineConfig({
             }
          ],
          sidebar: [
-            'overview',
+            {
+               label: 'News',
+               items: [
+                  'news',
+                  {
+                     slug: 'versions',
+                     label: '25w17a snapshot',
+                     badge: {
+                        variant: 'tip',
+                        text: 'New'
+                     }
+                  },
+                  {
+                     slug: 'vibrantvisuals',
+                     badge: {
+                        variant: 'tip',
+                        text: 'New'
+                     }
+                  },
+                  {
+                     slug: 'craftmine',
+                     badge: {
+                        variant: 'tip',
+                        text: 'New'
+                     }
+                  },
+                  {
+                     slug: 'springtolifedrop',
+                     badge: {
+                        variant: 'tip',
+                        text: 'New'
+                     }
+                  }
+               ]
+            },
+            {
+               label: 'McKnowledgeBook',
+               items: [
+                  'overview',
+                  'why'
+               ]
+            },
+            {
+               label: 'Minecraft',
+               items: [
+                  'minecraft',
+                  'versions',
+                  'edition',
+                  'environment',
+                  'minecraftmisc'
+               ]
+            },
+            {
+               label: 'Modding',
+               items: [
+                  'modding',
+                  'minecraftsobfuscatedcodebase',
+                  'projecttype',
+                  'loader',
+                  'moddingmisc'
+               ]
+            }
          ],
          editLink: {
             baseUrl: 'https://github.com/modpackker/mcknowledgebook/edit/main/'
