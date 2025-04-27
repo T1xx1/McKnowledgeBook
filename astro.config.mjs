@@ -6,6 +6,9 @@ import starlightLinksValidator from 'starlight-links-validator';
 
 // https://astro.build/config
 export default defineConfig({
+   vite: {
+      plugins: [tailwindcss()]
+   },
    site: 'https://mcknowledgebook.vercel.app',
    integrations: [
       starlight({
@@ -120,8 +123,5 @@ export default defineConfig({
             './src/styles/index.css'
          ]
       }),
-   ],
-   vite: {
-      plugins: [tailwindcss()]
-   }
+   ]
 });
