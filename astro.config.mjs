@@ -2,12 +2,16 @@
 import starlight from '@astrojs/starlight';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
+import starlightLinksValidator from 'starlight-links-validator';
 
 // https://astro.build/config
 export default defineConfig({
    site: 'https://mcknowledgebook.vercel.app',
    integrations: [
       starlight({
+         plugins: [
+            starlightLinksValidator()
+         ],
          title: 'McKnowledgeBook',
          favicon: '/favicon.ico',
          logo: {
