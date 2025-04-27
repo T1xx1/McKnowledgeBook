@@ -56,7 +56,7 @@ export default defineConfig({
                      }
                   },
                   {
-                     slug: 'springtolifedrop',
+                     slug: 'springtolife',
                      badge: {
                         variant: 'tip',
                         text: 'New'
