@@ -49,13 +49,6 @@ export default defineConfig({
                      }
                   },
                   {
-                     slug: 'craftmine',
-                     badge: {
-                        variant: 'tip',
-                        text: 'New'
-                     }
-                  },
-                  {
                      slug: 'springtolife',
                      badge: {
                         variant: 'tip',
