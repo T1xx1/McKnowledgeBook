@@ -23,9 +23,29 @@ export default defineConfig({
          description: 'Documentation for Minecraft content.',
          social: [
             {
+               icon: 'blueSky',
+               label: 'BlueSky',
+               href: 'https://bsky.app/profile/modpackker.bsky.social'
+            },
+            {
+               icon: 'discord',
+               label: 'Discord',
+               href: 'https://discord.gg/gaDqYhxyzB'
+            },
+            {
                icon: 'github',
                label: 'GitHub',
                href: 'https://github.com/modpackker/mcknowledgebook'
+            },
+            {
+               icon: 'instagram',
+               label: 'Instagram',
+               href: 'https://instagram.com/modpackker'
+            },
+            {
+               icon: 'threads',
+               label: 'Threads',
+               href: 'https://threads.net/@modpackker'
             }
          ],
          sidebar: [
