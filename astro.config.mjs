@@ -35,7 +35,7 @@ export default defineConfig({
                   'news',
                   {
                      slug: 'versions',
-                     label: '25w18a snapshot',
+                     label: '25w19a snapshot',
                      badge: {
                         variant: 'tip',
                         text: 'New'
