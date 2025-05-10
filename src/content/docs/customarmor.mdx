@@ -1,0 +1,34 @@
+---
+title: Custom armor
+aliases:
+  - Custom armor
+lastUpdated: 2022-05-07
+---
+
+import Asset from '../../components/asset.astro';
+
+Using [Commands](/commands) you can wear any block.
+
+[JE](/javaedition)
+```mcfunction
+/item replace entity @s <armor> with <block> 1
+```
+
+Replace `<armor>` with `armor.head`, `armor.chest`, `armor.leggings` or `armor.boots` and `<block>` with the block id you want to wear.
+
+Example
+```mcfunction
+/item replace entity @s armor.head with minecraft:glass 1
+```
+
+<div class="grid md:grid-cols-2 gap-2">
+   <Asset name="customarmorglass.webp" alt="Glass custom armor" />
+   <Asset name="customarmordirt.webp" alt="Dirt custom armor" />
+   <Asset name="customarmorobserver.webp" alt="Observer custom armor" />
+   <Asset name="customarmorleaves.webp" alt="Leaves custom armor" />
+</div>
+
+---
+
+#### Related
+> [Target selectors](/targetselectors)

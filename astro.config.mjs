@@ -92,6 +92,7 @@ export default defineConfig({
                   'environment',
                   'edition',
                   'versions',
+                  'commands',
                   'minecraftmisc'
                ]
             },
