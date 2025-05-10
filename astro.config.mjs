@@ -88,9 +88,10 @@ export default defineConfig({
                label: 'Minecraft',
                items: [
                   'minecraft',
-                  'versions',
-                  'edition',
+                  'vanilla',
                   'environment',
+                  'edition',
+                  'versions',
                   'minecraftmisc'
                ]
             },
@@ -99,6 +100,7 @@ export default defineConfig({
                items: [
                   'modding',
                   'minecraftsobfuscatedcodebase',
+                  'moddingenvironment',
                   'projecttype',
                   'loader',
                   'moddingmisc'
