@@ -1,0 +1,25 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from 'astro:assets';
+
+type Props = {
+   name: string;
+   alt: string;
+};
+
+const { name, alt } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+   `/src/content/assets/*.{png,svg}`
+);
+
+const src = '/src/content/assets/' + name;
+
+if (!images[src]) {
+   throw new Error(`Cannot find "${src}"`);
+}
+---
+
+<a href={src} target="_blank" class="block my-4">
+   <Image src={images[src]()} alt={alt} inferSize class="rounded-xl" />
+</a>
