@@ -81,7 +81,11 @@ export default defineConfig({
                label: 'McKnowledgeBook',
                items: [
                   'overview',
-                  'why'
+                  'why',
+                  {
+                     label: 'Tech',
+                     link: 'https://docs-modpackker.vercel.app/mcknowledgebook'
+                  }
                ]
             },
             {
