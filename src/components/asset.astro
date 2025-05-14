@@ -20,7 +20,7 @@ if (!images[src]) {
 }
 ---
 
-<a href={src} class="block">
+<a href={src} class="block my-4">
    <!-- @ts-expect-error -->
    <Image src={images[src]()} alt={alt} inferSize class="rounded-xl" />
 </a>
