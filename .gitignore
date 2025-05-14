@@ -21,4 +21,6 @@ pnpm-debug.log*
 .DS_Store
 
 .obsidian/workspace.json
-.obsidian/plugins/
+.obsidian/plugins/*/main.js
+.obsidian/plugins/*/styles.css
+.obsidian/plugins/*/manifest.json
