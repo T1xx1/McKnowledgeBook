@@ -11,3 +11,19 @@ a.site-title {
       @apply transition-all translate-x-1;
    }
 }
+
+/* pagination links animation */
+.pagination-links {
+   > [rel="prev"]:hover > svg {
+      @apply transition-all -translate-x-1;
+   }
+
+   > [rel="next"]:hover > svg {
+      @apply transition-all translate-x-1;
+   }
+}
+
+/* linkcard arrow animation */
+.sl-link-card:hover > svg {
+   @apply transition-all translate-x-1;
+}
