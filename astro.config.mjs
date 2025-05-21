@@ -97,6 +97,8 @@ export default defineConfig({
                   'edition',
                   'versions',
                   'commands',
+                  'datapack',
+                  'resourcepack',
                   'minecraftmisc'
                ]
             },
@@ -106,8 +108,12 @@ export default defineConfig({
                   'modding',
                   'minecraftsobfuscatedcodebase',
                   'moddingenvironment',
-                  'projecttype',
                   'loader',
+                  'projecttype',
+                  'mod',
+                  'modpack',
+                  'plugin',
+                  'shader',
                   'moddingmisc'
                ]
             }
