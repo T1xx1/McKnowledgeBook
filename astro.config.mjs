@@ -20,7 +20,7 @@ export default defineConfig({
          logo: {
             src: './src/assets/favicon.webp'
          },
-         description: 'Documentation for Minecraft content.',
+         description: 'The Minecraft modding Wiki.',
          social: [
             {
                icon: 'blueSky',
@@ -87,7 +87,6 @@ export default defineConfig({
             {
                label: 'McKnowledgeBook',
                items: [
-                  'overview',
                   'why',
                   {
                      label: 'Tech',
