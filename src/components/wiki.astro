@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+
+type Props = {
+	path: string;
+	name?: string;
+};
+
+const { path, name } = Astro.props;
+
+const url = new URL(path, 'https://minecraft.wiki');
+---
+
+<a href={url.href} class="my-4 flex gap-2 items-center text-pink-300">
+	<Image
+		src="https://minecraft.wiki/images/Favicon.ico"
+		alt="Minecraft Wiki"
+		inferSize
+		class="size-6"
+	/>
+
+	{name && name + ' • '}
+
+	Minecraft Wiki
+</a>

@@ -1,12 +1,12 @@
 ---
 type Props = {
-  src: string;
-  alt: string;
+	src: string;
+	alt: string;
 };
 
 const { src, alt } = Astro.props;
 ---
 
 <a href={src} target="_blank" class="block my-4">
-  <img src={src} alt={alt} class="rounded-xl" />
+	<img src={src} alt={alt} class="rounded-xl" />
 </a>
