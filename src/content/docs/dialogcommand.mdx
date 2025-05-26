@@ -1,0 +1,63 @@
+---
+title: Dialog command
+aliases:
+  - Dialog
+  - Dialog command
+lastUpdated: 2025-05-26
+---
+
+import { Steps } from '@astrojs/starlight/components';
+
+import Asset from '../../components/asset.astro';
+import Yb from '../../components/yb.astro';
+
+`/dialog` is a [Command](/commands) introduced in the [`25w20a`](/25w20a) snapshot that can display simple dialog interfaces to the player.
+
+:::note
+`/dialog` and `/dialogue` are two different commands. [Dialogue • Minecraft Wiki](https://minecraft.wiki/w/Commands/dialogue)
+:::
+
+In singleplayer opening a dialog pauses the game like with the pause menu.
+
+## Craft a dialog
+
+<Steps>
+
+1. Create a new [Datapack](/datapack) and open it in your favourite code editor. ([How to create a datapack](/craftdatapack))
+2. Create a new json file `<datapack>/data/<namespace>/dialog/<name>.json` with `<name>` as a custom name for your dialog.
+
+</Steps>
+
+A base dialog json should have
+```json
+{
+   "type": "minecraft:notice", // The dialog type
+   "title": "Dialog", // The dialog title, shown at the top of the dialog
+   "body": [ // The dialog content, list of UI elements or only one element
+      {
+         "type": "plain_message",
+         "contents": "Hello world!"
+      }
+   ] 
+}
+```
+
+:::caution[Experimental]
+Dialogs are still and experimental feature. To apply changes you would need to exit and re-open the world.
+:::
+
+Display your dialog with `/dialog show @s <datapack>:<name>`
+
+<Asset name="basedialog.webp" alt="Base dialog" />
+
+<br />
+
+<Yb src="https://www.youtube.com/embed/okWD6kFrYok" />
+
+---
+
+#### Resources
+
+- [Minecraft Wiki](https://minecraft.wiki/w/Dialog)
+
+<Yb src="https://www.youtube.com/embed/wUpwt5V59JA" />

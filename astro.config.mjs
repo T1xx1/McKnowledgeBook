@@ -62,6 +62,13 @@ export default defineConfig({
                      }
                   },
                   {
+                     slug: 'dialogcommand',
+                     badge: {
+                        variant: 'tip',
+                        text: 'New'
+                     }
+                  },
+                  {
                      slug: 'vibrantvisuals',
                      badge: {
                         variant: 'tip',
