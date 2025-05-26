@@ -6,10 +6,24 @@ head:
 template: splash
 hero:
    title: McKnowledgeBook
-   tagline: Documentation for Minecraft content.
+   tagline: The Minecraft modding Minecraft Wiki.
    actions:
       - text: Start reading
-        link: /overview
+        link: /minecraft
         icon: right-arrow
 editUrl: false
 ---
+
+import { CardGrid, LinkCard } from "@astrojs/starlight/components";
+
+<CardGrid>
+   <LinkCard title="News" href="/news" class="tip" />
+   <LinkCard title="Minecraft" href="/minecraft" />
+   <LinkCard title="Modding" href="/modding" />
+</CardGrid>
+
+<br />
+<br />
+<br />
+
+[Why this Wiki?](/why)
