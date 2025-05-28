@@ -55,7 +55,7 @@ export default defineConfig({
                   'news',
                   {
                      slug: 'versions',
-                     label: '25w21a snapshot',
+                     label: '1.21.6 Pre-Release 1',
                      badge: {
                         variant: 'tip',
                         text: 'New'
