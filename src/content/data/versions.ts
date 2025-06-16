@@ -1,5 +1,5 @@
-import type { Loose } from '../../../../../packages/tsfix/src/loose';
-import type { Version } from '../../../../../packages/metadata/src/minecraft/versions';
+import type { Loose } from './loose';
+import type { Version } from './minecraft';
 
 export const badges: {
    upcoming: Version;
