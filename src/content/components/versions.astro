@@ -1,0 +1,64 @@
+---
+import { Badge } from '@astrojs/starlight/components';
+
+import { versions, legacyVersions } from '../../../../../packages/metadata/src/minecraft/versions';
+import { badges, versionsInfo } from '../data/versions';
+---
+
+<table>
+	<tr>
+		<th>Version</th>
+		<th>Name</th>
+		<th>Release date</th>
+		<th>Official article</th>
+		<th>
+			<a href="https://minecraft.wiki">Minecraft wiki</a>
+		</th>
+	</tr>
+	{
+		[...versions, ...legacyVersions].map((version) => {
+			const versionInfo = versionsInfo.get(version);
+
+			return (
+				<tr>
+					<td>
+						{versionInfo && !versionInfo.name && versionInfo.page ?
+							<a href={`/${versionInfo.page}`}>
+								<code>{version}</code>
+							</a>
+						:	<code>{version}</code>}
+
+						{versionInfo &&
+							versionInfo.date &&
+							new Date(versionInfo.date) >=
+								new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000) && (
+								<Badge variant="tip" text="New" />
+							)}
+
+						{badges.upcoming === version && <Badge variant="caution" text="Upcoming" />}
+						{badges.latest === version && <Badge variant="success" text="Latest" />}
+						{badges.main === version && <Badge variant="success" text="Main" />}
+					</td>
+					<td>
+						{versionInfo && versionInfo.name ?
+							versionInfo.page ?
+								<a href={`/${versionInfo.page}`}>{versionInfo.name}</a>
+							:	versionInfo.name
+						:	''}
+					</td>
+					<td>{versionInfo && versionInfo.date ? versionInfo.date : ''}</td>
+					<td>
+						{versionInfo && versionInfo.article ?
+							<a href={versionInfo.article}>Article</a>
+						:	''}
+					</td>
+					<td>
+						{versionInfo && versionInfo.wiki ?
+							<a href={versionInfo.wiki}>Wiki</a>
+						:	''}
+					</td>
+				</tr>
+			);
+		})
+	}
+</table>
