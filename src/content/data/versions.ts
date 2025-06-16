@@ -29,6 +29,14 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       }
    ],
    [
+      '1.21.6-rc1',
+      {
+         date: '2025-06-12',
+         article: 'https://www.minecraft.net/en-us/article/minecraft-1-21-6-release-candidate-1',
+         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.6_Release_Candidate_1'
+      }
+   ],
+   [
       '1.21.6-pre4',
       {
          date: '2025-06-10',
