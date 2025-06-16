@@ -103,8 +103,8 @@ export default defineConfig({
                   'edition',
                   'versions',
                   'commands',
-                  'datapack',
                   'resourcepack',
+                  'datapack',
                   'minecraftmisc'
                ]
             },

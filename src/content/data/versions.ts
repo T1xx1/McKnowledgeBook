@@ -13,10 +13,12 @@ export const badges: {
 
 type VersionInfo = {
    name?: string;
-   page?: URL['href'];
+   page?: string;
    date?: string;
    article?: URL['href'];
    wiki?: URL['href'];
+   resourcepackVersion?: number;
+   datapackVersion?: number;
 };
 
 export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
@@ -33,7 +35,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-06-12',
          article: 'https://www.minecraft.net/en-us/article/minecraft-1-21-6-release-candidate-1',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.6_Release_Candidate_1'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.6_Release_Candidate_1',
+         resourcepackVersion: 64,
+         datapackVersion: 81
       }
    ],
    [
@@ -41,7 +45,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-06-10',
          article: 'https://www.minecraft.net/en-us/article/minecraft-1-21-6-pre-release-4',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.6_Pre-Release_4'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.6_Pre-Release_4',
+         resourcepackVersion: 63,
+         datapackVersion: 80
       }
    ],
    [
@@ -49,7 +55,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-06-04',
          article: 'https://www.minecraft.net/en-us/article/minecraft-1-21-6-pre-release-3',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.6_Pre-Release_3'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.6_Pre-Release_3',
+         resourcepackVersion: 63,
+         datapackVersion: 80
       }
    ],
    [
@@ -57,7 +65,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-06-02',
          article: 'https://www.minecraft.net/en-us/article/minecraft-1-21-6-pre-release-2',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.6_Pre-Release_2'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.6_Pre-Release_2',
+         resourcepackVersion: 63,
+         datapackVersion: 79
       }
    ],
    [
@@ -65,7 +75,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-05-28',
          article: 'https://www.minecraft.net/en-us/article/minecraft-1-21-6-pre-release-1',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.6_Pre-Release_1'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.6_Pre-Release_1',
+         resourcepackVersion: 63,
+         datapackVersion: 79
       }
    ],
    [
@@ -74,7 +86,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
          page: '25w21a',
          date: '2025-05-20',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w21a',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w21a'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w21a',
+         resourcepackVersion: 62,
+         datapackVersion: 78
       }
    ],
    [
@@ -83,7 +97,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
          page: '25w20a',
          date: '2025-05-13',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w20a',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w20a'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w20a',
+         resourcepackVersion: 61,
+         datapackVersion: 77
       }
    ],
    [
@@ -91,7 +107,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-05-06',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w19a',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w19a'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w19a',
+         resourcepackVersion: 60,
+         datapackVersion: 76
       }
    ],
    [
@@ -99,7 +117,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-04-29',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w18a',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w18a'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w18a',
+         resourcepackVersion: 59,
+         datapackVersion: 75
       }
    ],
    [
@@ -107,7 +127,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-04-22',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w17a',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w17a'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w17a',
+         resourcepackVersion: 58,
+         datapackVersion: 74
       }
    ],
    [
@@ -115,7 +137,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-04-15',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w16a',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w16a'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w16a',
+         resourcepackVersion: 57,
+         datapackVersion: 73
       }
    ],
    [
@@ -123,15 +147,20 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-04-08',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w15a',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w15a'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w15a',
+         resourcepackVersion: 56,
+         datapackVersion: 72
       }
    ],
    [
       '25w14craftmine',
       {
+         page: 'craftmine',
          date: '2025-04-01',
          article: 'https://www.minecraft.net/en-us/article/the-craftmine-update',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w14craftmine'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w14craftmine',
+         resourcepackVersion: 55,
+         datapackVersion: 71
       }
    ],
    [
@@ -141,7 +170,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
          page: 'springtolife',
          date: '2025-03-25',
          article: 'https://www.minecraft.net/en-us/article/spring-to-life-game-drop',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.5'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.5',
+         resourcepackVersion: 55,
+         datapackVersion: 71
       }
    ],
    [
@@ -149,7 +180,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-03-24',
          article: 'https://www.minecraft.net/en-us/article/minecraft-1-21-5-release-candidate-2',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.5_Release_Candidate_2'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.5_Release_Candidate_2',
+         resourcepackVersion: 55,
+         datapackVersion: 71
       }
    ],
    [
@@ -157,7 +190,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-03-20',
          article: 'https://www.minecraft.net/en-us/article/minecraft-1-21-5-release-candidate-1',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.5_Release_Candidate_1'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.5_Release_Candidate_1',
+         resourcepackVersion: 55,
+         datapackVersion: 71
       }
    ],
    [
@@ -165,7 +200,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-03-18',
          article: 'https://www.minecraft.net/en-us/article/minecraft-1-21-5-pre-release-3',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.5_Pre-Release_3'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.5_Pre-Release_3',
+         resourcepackVersion: 55,
+         datapackVersion: 71
       }
    ],
    [
@@ -173,7 +210,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-03-12',
          article: 'https://www.minecraft.net/en-us/article/minecraft-1-21-5-pre-release-2',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.5_Pre-release_2'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.5_Pre-release_2',
+         resourcepackVersion: 55,
+         datapackVersion: 71
       }
    ],
    [
@@ -181,7 +220,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-03-11',
          article: 'https://www.minecraft.net/en-us/article/minecraft-1-21-5-pre-release-1',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.5_Release_Candidate_1'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.5_Release_Candidate_1',
+         resourcepackVersion: 55,
+         datapackVersion: 70
       }
    ],
    [
@@ -189,7 +230,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-03-05',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w10a',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w10a'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w10a',
+         resourcepackVersion: 54,
+         datapackVersion: 70
       }
    ],
    [
@@ -197,7 +240,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-02-27',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w09b',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w09b'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w09b',
+         resourcepackVersion: 53,
+         datapackVersion: 69
       }
    ],
    [
@@ -205,7 +250,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-02-26',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w09a',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w09a'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w09a',
+         resourcepackVersion: 53,
+         datapackVersion: 69
       }
    ],
    [
@@ -213,7 +260,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-02-19',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w08a',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w08a'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w08a',
+         resourcepackVersion: 53,
+         datapackVersion: 68
       }
    ],
    [
@@ -221,7 +270,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-02-13',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w07a',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w07a'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w07a',
+         resourcepackVersion: 52,
+         datapackVersion: 67
       }
    ],
    [
@@ -229,7 +280,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-02-05',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w06a',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w06a'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w06a',
+         resourcepackVersion: 51,
+         datapackVersion: 66
       }
    ],
    [
@@ -237,7 +290,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-01-29',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w05a',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w05a'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w05a',
+         resourcepackVersion: 50,
+         datapackVersion: 65
       }
    ],
    [
@@ -245,7 +300,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-01-22',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w04a',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w04a'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w04a',
+         resourcepackVersion: 49,
+         datapackVersion: 64
       }
    ],
    [
@@ -253,7 +310,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-01-15',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w03a',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w03a'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w03a',
+         resourcepackVersion: 48,
+         datapackVersion: 63
       }
    ],
    [
@@ -261,7 +320,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          date: '2025-01-08',
          article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w02a',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_25w02a'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_25w02a',
+         resourcepackVersion: 47,
+         datapackVersion: 62
       }
    ],
    [
@@ -270,7 +331,9 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
          name: 'The Garden Awakens',
          date: '2024-12-03',
          article: 'https://www.minecraft.net/en-us/article/the-garden-awakens-is-here',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.4'
+         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.4',
+         resourcepackVersion: 46,
+         datapackVersion: 61
       }
    ],
    [

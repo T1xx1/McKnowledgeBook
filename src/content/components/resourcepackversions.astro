@@ -1,0 +1,36 @@
+---
+import { versions } from '../data/minecraft';
+import { versionsInfo } from '../data/versions';
+---
+
+<table>
+	<tr>
+		<th>
+			<a href="/minecraft">Minecraft</a>
+			<a href="/versions">Version</a>
+		</th>
+		<th>Resource pack version</th>
+	</tr>
+	{
+		versions.map((version) => {
+			const versionInfo = versionsInfo.get(version);
+
+			if (!versionInfo || !versionInfo.resourcepackVersion) {
+				return;
+			}
+
+			return (
+				<tr>
+					<td>
+						{!versionInfo.name && versionInfo.page ?
+							<a href={`/${versionInfo.page}`}>
+								<code>{version}</code>
+							</a>
+						:	<code>{version}</code>}
+					</td>
+					<td>{versionInfo.resourcepackVersion}</td>
+				</tr>
+			);
+		})
+	}
+</table>
