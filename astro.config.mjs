@@ -54,8 +54,15 @@ export default defineConfig({
                items: [
                   'news',
                   {
+                     slug: 'chasetheskies',
+                     badge: {
+                        variant: 'tip',
+                        text: 'New'
+                     }
+                  },
+                  {
                      slug: 'versions',
-                     label: '1.21.6 Release Candidate 1',
+                     label: '1.21.6',
                      badge: {
                         variant: 'tip',
                         text: 'New'
@@ -70,13 +77,6 @@ export default defineConfig({
                   },
                   {
                      slug: 'vibrantvisuals',
-                     badge: {
-                        variant: 'tip',
-                        text: 'New'
-                     }
-                  },
-                  {
-                     slug: 'springtolife',
                      badge: {
                         variant: 'tip',
                         text: 'New'

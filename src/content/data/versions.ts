@@ -6,9 +6,10 @@ export const badges: {
    latest: Version;
    main: Version;
 } = {
-   upcoming: '1.21.6',
-   latest: '1.21.6-rc1',
-   main: '1.21.5'
+   /* @ts-expect-error */
+   upcoming: '1.21.7',
+   latest: '1.21.6',
+   main: '1.21.6'
 }
 
 type VersionInfo = {
@@ -27,7 +28,11 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
       {
          name: 'Chase the Skies',
          page: 'chasetheskies',
-         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.6'
+         date: '2025-06-17',
+         article: 'https://www.minecraft.net/it-it/article/minecraft-java-edition-1-21-6',
+         wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.6',
+         resourcepackVersion: 64,
+         datapackVersion: 81
       }
    ],
    [
@@ -169,7 +174,7 @@ export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
          name: 'Spring to Life',
          page: 'springtolife',
          date: '2025-03-25',
-         article: 'https://www.minecraft.net/en-us/article/spring-to-life-game-drop',
+         article: 'https://www.minecraft.net/it-it/article/minecraft-java-edition-1-21-5',
          wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.5',
          resourcepackVersion: 55,
          datapackVersion: 71

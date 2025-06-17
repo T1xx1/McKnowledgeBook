@@ -36,8 +36,8 @@ import { badges, versionsInfo } from '../data/versions';
 							)}
 
 						{badges.upcoming === version && <Badge variant="caution" text="Upcoming" />}
-						{badges.latest === version && <Badge variant="success" text="Latest" />}
 						{badges.main === version && <Badge variant="success" text="Main" />}
+						{badges.latest === version && <Badge variant="success" text="Latest" />}
 					</td>
 					<td>
 						{versionInfo && versionInfo.name ?
