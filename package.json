@@ -10,14 +10,14 @@
       "build": "astro build"
    },
    "dependencies": {
-      "sharp": "^0.34.1"
+      "sharp": "^0.34.2"
    },
    "devDependencies": {
-      "@astrojs/starlight": "^0.34.3",
+      "@astrojs/starlight": "^0.34.4",
       "@astrojs/starlight-tailwind": "^4.0.1",
-      "@tailwindcss/vite": "^4.1.4",
-      "astro": "^5.9.2",
-      "starlight-links-validator": "^0.16.0",
-      "tailwindcss": "^4.1.4"
+      "@tailwindcss/vite": "^4.1.10",
+      "astro": "^5.9.4",
+      "starlight-links-validator": "^0.17.0",
+      "tailwindcss": "^4.1.10"
    }
 }
