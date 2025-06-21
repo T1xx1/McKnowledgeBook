@@ -85,16 +85,6 @@ export default defineConfig({
                ]
             },
             {
-               label: 'McKnowledgeBook',
-               items: [
-                  'why',
-                  {
-                     label: 'Tech',
-                     link: 'https://docs-modpackker.vercel.app/mcknowledgebook'
-                  }
-               ]
-            },
-            {
                label: 'Minecraft',
                items: [
                   'minecraft',
@@ -123,6 +113,21 @@ export default defineConfig({
                   'moddingmisc',
                   'modpack'
                ]
+            },
+            {
+               label: 'McKnowledgeBook',
+               items: [
+                  'why',
+                  'tech'
+               ]
+            },
+            {
+               label: 'Modpackker',
+               link: 'https://modpackker.vercel.app',
+            },
+            {
+               label: '💚 T1xx1',
+               link: 'https://t1xx1.vercel.app',
             }
          ],
          editLink: {

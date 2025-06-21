@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets';
+
+import icon from '../assets/favicon.webp';
+import modpackker from '../assets/modpackker.webp';
+---
+
+<footer class="flex flex-col sm:flex-row gap-10 items-start">
+	<div class="flex flex-col">
+		<div class="flex gap-3 items-center">
+			<Image src={icon} alt="Icon" class="size-10" />
+
+			<div class="mt-0 text-lg font-medium">McKnowledgeBook</div>
+		</div>
+
+		<div>
+			Built with 💚 by <a href="https://t1xx1.vercel.app">T1xx1</a>
+		</div>
+	</div>
+
+	<div class="mt-0">
+		<div class="font-medium">Project</div>
+
+		<ul class="mt-0 pl-5">
+			<li>
+				<a href="/why">Why this wiki?</a>
+			</li>
+
+			<li>
+				<a href="/tech">Tech</a>
+			</li>
+
+			<li>
+				<a
+					href="https://modpackker.vercel.app"
+					class="relative bottom-[-7px] inline-flex gap-1.5 items-center"
+				>
+					<Image src={modpackker} alt="Modpackker" class="size-6" />
+
+					Modpackker
+				</a>
+			</li>
+		</ul>
+	</div>
+</footer>
