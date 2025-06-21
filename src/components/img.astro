@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 type Props = {
 	src: string;
 	alt: string;
@@ -8,5 +10,5 @@ const { src, alt } = Astro.props;
 ---
 
 <a href={src} target="_blank" class="block my-4">
-	<img src={src} alt={alt} class="rounded-xl" />
+	<Image src={src} alt={alt} inferSize class="rounded-xl" />
 </a>
