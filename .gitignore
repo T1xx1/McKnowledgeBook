@@ -24,3 +24,5 @@ pnpm-debug.log*
 .obsidian/plugins/*/main.js
 .obsidian/plugins/*/styles.css
 .obsidian/plugins/*/manifest.json
+
+.turbo
