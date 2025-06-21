@@ -1,0 +1,26 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+---
+
+<a
+	href="/chasetheskies"
+	class="[--color-theme:#F16734] block banner bg-center bg-cover rounded-2xl p-5 h-[25rem] sm:h-[30rem] no-underline"
+>
+	<div
+		class="group bg-white/10 border border-white/10 ml-auto rounded-2xl px-7 py-6 w-96 text-(--color-theme) hover:text-(--color-theme) font-bold flex items-center justify-between backdrop-blur-sm shadow-xl"
+	>
+		<div>
+			<div class="text-2xl">Chase the Skies</div>
+
+			Discover the 1.21.6 game drop
+		</div>
+
+		<Icon name="right-arrow" class="my-auto size-7 transition-all group-hover:translate-x-1" />
+	</div>
+</a>
+
+<style>
+	.banner {
+		background-image: url('https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/MCV_ChaseTheSkies_launch_Header_1170x500.jpg');
+	}
+</style>
