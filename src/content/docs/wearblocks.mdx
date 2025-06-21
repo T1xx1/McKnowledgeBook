@@ -6,6 +6,7 @@ lastUpdated: 2022-05-10
 ---
 
 import Asset from '../../components/asset.astro';
+import Gallery from '../../components/gallery.astro';
 
 Using [Commands](/commands) you can wear any block.
 
@@ -21,12 +22,12 @@ Example
 /item replace entity @s armor.head with minecraft:glass 1
 ```
 
-<div class="grid md:grid-cols-2 gap-3 *:m-0">
+<Gallery>
    <Asset name="wearblocksglass.webp" alt="Glass custom armor" />
    <Asset name="wearblocksdirt.webp" alt="Dirt custom armor" />
    <Asset name="wearblocksobserver.webp" alt="Observer custom armor" />
    <Asset name="wearblocksleaves.webp" alt="Leaves custom armor" />
-</div>
+</Gallery>
 
 ---
 
