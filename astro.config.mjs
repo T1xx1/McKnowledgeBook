@@ -102,6 +102,7 @@ export default defineConfig({
                   'environment',
                   'edition',
                   'versions',
+                  'vibrantvisuals',
                   'commands',
                   'resourcepack',
                   'datapack',
@@ -117,10 +118,10 @@ export default defineConfig({
                   'loader',
                   'projecttype',
                   'mod',
-                  'modpack',
                   'plugin',
                   'shader',
-                  'moddingmisc'
+                  'moddingmisc',
+                  'modpack'
                ]
             }
          ],
