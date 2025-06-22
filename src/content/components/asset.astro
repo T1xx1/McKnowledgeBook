@@ -9,9 +9,7 @@ type Props = {
 
 const { path, alt } = Astro.props;
 
-const images = import.meta.glob<{ default: ImageMetadata }>(
-	`/src/content/assets/*.{webp,png,svg}`
-);
+const images = import.meta.glob<{ default: ImageMetadata }>(`/src/content/assets/*.{webp,png,svg}`);
 
 const src = '/src/content/assets/' + path;
 
@@ -20,7 +18,5 @@ if (!images[src]) {
 }
 ---
 
-<a href={src} class="block my-4">
-	<!-- @ts-expect-error -->
-	<Image src={images[src]()} alt={alt} inferSize class="rounded-xl" />
-</a>
+<!-- @ts-expect-error -->
+<Image src={images[src]()} alt={alt} inferSize class="my-4 rounded-xl" />
