@@ -1,0 +1,10 @@
+{
+  "foldHeading": false,
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "docs",
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "assets",
+  "useMarkdownLinks": true
+}
