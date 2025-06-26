@@ -53,16 +53,16 @@ export default defineConfig({
                label: 'News',
                items: [
                   'news',
+				  {
+					 slug: 'versions',
+					 label: '1.21.7-rc1',
+					 badge: {
+						variant: 'tip',
+						text: 'New'
+					 }
+				  },
                   {
                      slug: 'chasetheskies',
-                     badge: {
-                        variant: 'tip',
-                        text: 'New'
-                     }
-                  },
-                  {
-                     slug: 'versions',
-                     label: '1.21.6',
                      badge: {
                         variant: 'tip',
                         text: 'New'
