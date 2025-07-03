@@ -7,9 +7,9 @@ export const badges: {
 	main: Version;
 } = {
 	/* @ts-expect-error */
-	upcoming: '1.21.7',
-	latest: '1.21.7-rc1',
-	main: '1.21.6'
+	upcoming: '1.21.8',
+	latest: '1.21.7',
+	main: '1.21.7'
 }
 
 type VersionInfo = {
@@ -23,6 +23,16 @@ type VersionInfo = {
 };
 
 export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
+	[
+		'1.21.7',
+		{
+			date: '2025-06-30',
+			article: 'https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-7',
+			wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.7',
+			resourcepackVersion: 64,
+			datapackVersion: 81
+		}
+	],
 	[
 		'1.21.7-rc2',
 		{
