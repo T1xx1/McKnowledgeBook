@@ -55,7 +55,7 @@ export default defineConfig({
                   'news',
 				  {
 					 slug: 'versions',
-					 label: '1.21.7',
+					 label: '1.21.8',
 					 badge: {
 						variant: 'tip',
 						text: 'New'
