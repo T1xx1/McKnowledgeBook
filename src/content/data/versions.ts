@@ -8,8 +8,8 @@ export const badges: {
 } = {
 	/* @ts-expect-error */
 	upcoming: '1.21.9',
-	latest: '1.21.7',
-	main: '1.21.7'
+	latest: '1.21.8',
+	main: '1.21.8'
 }
 
 type VersionInfo = {
