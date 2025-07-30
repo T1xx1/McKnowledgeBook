@@ -8,7 +8,7 @@ export const badges: {
 } = {
 	/* @ts-expect-error */
 	upcoming: '1.21.9',
-	latest: '1.21.8',
+	latest: '25w31a',
 	main: '1.21.8'
 }
 
@@ -18,11 +18,21 @@ type VersionInfo = {
 	date?: string;
 	article?: URL['href'];
 	wiki?: URL['href'];
-	resourcepackVersion?: number;
-	datapackVersion?: number;
+	resourcepackVersion?: number | string;
+	datapackVersion?: number | string;
 };
 
 export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
+	[
+		'25w31a',
+		{
+			date: '2025-07-29',
+			article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w31a',
+			wiki: 'https://minecraft.wiki/w/Java_Edition_25w31a',
+			resourcepackVersion: '65.0',
+			datapackVersion: '82.0'
+		}
+	],
 	[
 		'1.21.8',
 		{
