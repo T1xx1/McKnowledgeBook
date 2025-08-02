@@ -110,8 +110,8 @@ export default defineConfig({
 						'mod',
 						'plugin',
 						'shader',
-						'moddingmisc',
-						'modpack'
+						'modpack',
+						'moddingmisc'
 					]
 				},
 				{
