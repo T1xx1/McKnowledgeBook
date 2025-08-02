@@ -1,6 +1,6 @@
-/* header title animation */
-a.site-title {
-	@apply gap-2.5 transition-all hover:translate-y-[-3px];
+/* linkcard arrow animation */
+.sl-link-card:hover>svg {
+	@apply transition-all translate-x-1;
 }
 
 /* landing primary button animation */
@@ -12,18 +12,30 @@ a.site-title {
 	}
 }
 
-/* pagination links animation */
-.pagination-links {
-	>[rel="prev"]:hover>svg {
-		@apply transition-all -translate-x-1;
-	}
+header {
 
-	>[rel="next"]:hover>svg {
-		@apply transition-all translate-x-1;
+	/* site title animation */
+	a.site-title {
+		@apply gap-2.5 transition-all hover:translate-y-[-3px];
 	}
 }
 
-/* linkcard arrow animation */
-.sl-link-card:hover>svg {
-	@apply transition-all translate-x-1;
+main {
+	img {
+		@apply rounded-xl;
+	}
+
+	footer {
+
+		/* pagination link animations */
+		.pagination-links {
+			>[rel="prev"]:hover>svg {
+				@apply transition-all -translate-x-1;
+			}
+
+			>[rel="next"]:hover>svg {
+				@apply transition-all translate-x-1;
+			}
+		}
+	}
 }

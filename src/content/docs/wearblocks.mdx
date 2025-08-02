@@ -5,12 +5,12 @@ aliases:
 lastUpdated: 2022-05-10
 ---
 
-import Asset from '~/components/asset.astro';
 import Gallery from '~/components/gallery.astro';
 
 Using [Commands](/commands) you can wear any block.
 
 [JE](/javaedition)
+
 ```mcfunction
 /item replace entity @s <armor> with <block> 1
 ```
@@ -18,18 +18,23 @@ Using [Commands](/commands) you can wear any block.
 Replace `<armor>` with `armor.head`, `armor.chest`, `armor.leggings` or `armor.boots` and `<block>` with the block id you want to wear.
 
 Example
+
 ```mcfunction
 /item replace entity @s armor.head with minecraft:glass 1
 ```
 
 <Gallery>
-   <Asset path="wearblocksglass.webp" alt="Glass custom armor" />
-   <Asset path="wearblocksdirt.webp" alt="Dirt custom armor" />
-   <Asset path="wearblocksobserver.webp" alt="Observer custom armor" />
-   <Asset path="wearblocksleaves.webp" alt="Leaves custom armor" />
+	![](~/assets/wearblocksglass.webp)
+
+	![](~/assets/wearblocksdirt.webp)
+
+	![](~/assets/wearblocksobserver.webp)
+	
+	![](~/assets/wearblocksleaves.webp)
 </Gallery>
 
 ---
 
 #### Related
+
 > [Target selectors](/targetselectors)

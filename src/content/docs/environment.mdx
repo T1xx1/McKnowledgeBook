@@ -8,8 +8,6 @@ aliases:
 lastUpdated: 2025-05-10
 ---
 
-import Asset from '~/components/asset.astro';
-import Img from '~/components/img.astro';
 import Wiki from '~/components/wiki.astro';
 import Yb from '~/components/yb.astro';
 
@@ -18,7 +16,7 @@ import Yb from '~/components/yb.astro';
 Most of [Minecraft](/minecraft) logic is handled on the server so clients cannot alter Minecraft features (preventing cheats) and clients are also more lightweight.
 Game logic is piloted by the server that communicates states to the clients. Clients are more of a interface for players and just send to the server player actions to make interactions possible.
 
-<Asset path="clientserver.svg" alt="Client & server" />
+![](~/assets/clientserver.svg)
 
 That's why, with bad Internet connections, you and your friends could see different things, get teleported back to previous locations or blocks will not actually break because the state of these changes hasn't been updated on the server.
 
@@ -28,7 +26,7 @@ Since `12w18a` snapshot singleplayer game uses the same architecture of multipla
 
 When you enter a singleplayer world the server engine will be spawned on your machine instead of a remote one.
 
-<Asset path="singleplayerworld.svg" alt="Singleplayer world" />
+![](~/assets/singleplayerworld.svg)
 
 This infrastructure allows Minecraft code to be the same for singleplayer and multiplayer therefore smaller bundles sizes and easier for Minecraft developers to maintain.
 (Before `12w18a` snapshot singleplayer code was a separated jar file with the same exact features of multiplayer game mode) 
@@ -37,11 +35,11 @@ Despite having the same architecture lags don't occur with singleplayer: on your
 
 You can open your world to [LAN](https://en.wikipedia.org/wiki/Local_area_network) connections (from the in game menù) and the server on your machine will behave the same way for multiplayer on a remote one, so other players can join to your world with the multiplayer menu using a LAN address.
 
-<Asset path="forwardedsingleplayerworld.svg" alt="Forwarded singleplayer world" />
+![](~/assets/forwardedsingleplayerworld.svg)
 
 If the players are not on your network, port forwarding is required so the server can communicate with clients over the Internet.
 
-<Asset path="internetforwardedsingleplayerworld.svg" alt="Internet forwarded singleplayer world" />
+![](~/assets/internetforwardedsingleplayerworld.svg)
 
 In the end the only difference between singleplayer and multiplayer game architecture is the place the server is running.
 
