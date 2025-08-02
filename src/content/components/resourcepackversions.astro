@@ -1,5 +1,5 @@
 ---
-import { versions } from '~/data/minecraft';
+import { mcVersions } from '@mc/metadata';
 import { versionsInfo } from '~/data/versions';
 ---
 
@@ -12,7 +12,7 @@ import { versionsInfo } from '~/data/versions';
 		<th>Resource pack version</th>
 	</tr>
 	{
-		versions.map((version) => {
+		mcVersions.map((version) => {
 			const versionInfo = versionsInfo.get(version);
 
 			if (!versionInfo || !versionInfo.resourcepackVersion) {

@@ -1,7 +1,8 @@
 ---
 import { Badge } from '@astrojs/starlight/components';
 
-import { versions, legacyVersions } from '~/data/minecraft';
+import { mcVersions, mcLegacyVersions } from '@mc/metadata';
+
 import { badges, versionsInfo } from '~/data/versions';
 ---
 
@@ -16,7 +17,7 @@ import { badges, versionsInfo } from '~/data/versions';
 		</th>
 	</tr>
 	{
-		[...versions, ...legacyVersions].map((version) => {
+		[...mcVersions, ...mcLegacyVersions].map((version) => {
 			const versionInfo = versionsInfo.get(version);
 
 			return (
