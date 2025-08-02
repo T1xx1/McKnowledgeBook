@@ -1,0 +1,3 @@
+[submodule "metadata"]
+	path = modules/metadata
+	url = https://github.com/modpackker/metadata.git
