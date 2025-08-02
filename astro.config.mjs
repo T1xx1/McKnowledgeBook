@@ -161,7 +161,8 @@ export default defineConfig({
 				'./src/styles/index.css'
 			],
 			components: {
-				PageTitle: './src/components/pagetitle.astro'
+				PageTitle: './src/components/pagetitle.astro',
+				ThemeSelect: './src/components/themeselect.astro',
 			}
 		}),
 	]
