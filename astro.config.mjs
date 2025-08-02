@@ -61,27 +61,9 @@ export default defineConfig({
 								text: 'New'
 							}
 						},
-						{
-							slug: 'chasetheskies',
-							badge: {
-								variant: 'tip',
-								text: 'New'
-							}
-						},
-						{
-							slug: 'dialogcommand',
-							badge: {
-								variant: 'tip',
-								text: 'New'
-							}
-						},
-						{
-							slug: 'vibrantvisuals',
-							badge: {
-								variant: 'tip',
-								text: 'New'
-							}
-						}
+						'chasetheskies',
+						'dialogcommand',
+						'vibrantvisuals'
 					]
 				},
 				{
