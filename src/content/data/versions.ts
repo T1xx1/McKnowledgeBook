@@ -1,10 +1,11 @@
+import type { McVersion } from '@mc/metadata';
+
 import type { Loose } from './loose';
-import type { Version } from './minecraft';
 
 export const badges: {
-	upcoming: Version;
-	latest: Version;
-	main: Version;
+	upcoming: McVersion;
+	latest: McVersion;
+	main: McVersion;
 } = {
 	/* @ts-expect-error */
 	upcoming: '1.21.9',
@@ -22,7 +23,7 @@ type VersionInfo = {
 	datapackVersion?: number | string;
 };
 
-export const versionsInfo = new Map<Loose<Version>, VersionInfo>([
+export const versionsInfo = new Map<Loose<McVersion>, VersionInfo>([
 	[
 		'25w31a',
 		{
