@@ -1,29 +1,29 @@
 /* header title animation */
 a.site-title {
-   @apply gap-2.5 transition-all hover:translate-y-[-3px];
+	@apply gap-2.5 transition-all hover:translate-y-[-3px];
 }
 
 /* landing primary button animation */
 .hero a.sl-link-button.primary {
-   @apply font-semibold;
+	@apply font-semibold;
 
-   &:hover svg {
-      @apply transition-all translate-x-1;
-   }
+	&:hover svg {
+		@apply transition-all translate-x-1;
+	}
 }
 
 /* pagination links animation */
 .pagination-links {
-   > [rel="prev"]:hover > svg {
-      @apply transition-all -translate-x-1;
-   }
+	>[rel="prev"]:hover>svg {
+		@apply transition-all -translate-x-1;
+	}
 
-   > [rel="next"]:hover > svg {
-      @apply transition-all translate-x-1;
-   }
+	>[rel="next"]:hover>svg {
+		@apply transition-all translate-x-1;
+	}
 }
 
 /* linkcard arrow animation */
-.sl-link-card:hover > svg {
-   @apply transition-all translate-x-1;
+.sl-link-card:hover>svg {
+	@apply transition-all translate-x-1;
 }
