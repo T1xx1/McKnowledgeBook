@@ -52,7 +52,8 @@
 	</tr>
 {:else}
 	<tr class="*:px-2 *:py-3">
-		<td colspan="7">
+		<td></td>
+		<td colspan="6">
 			<code>{_}</code>
 		</td>
 	</tr>
