@@ -20,22 +20,34 @@ header {
 	}
 }
 
-main {
-	img {
-		@apply rounded-xl;
-	}
+.main-pane {
+	@apply w-full;
 
-	footer {
+	main {
+		img {
+			@apply rounded-xl;
+		}
 
-		/* pagination link animations */
-		.pagination-links {
-			>[rel="prev"]:hover>svg {
-				@apply transition-all -translate-x-1;
-			}
+		.sl-container:not(:has(.hero)) {
+			@apply ml-2 max-w-full;
+		}
 
-			>[rel="next"]:hover>svg {
-				@apply transition-all translate-x-1;
+		footer {
+
+			/* pagination link animations */
+			.pagination-links {
+				>[rel="prev"]:hover>svg {
+					@apply transition-all -translate-x-1;
+				}
+
+				>[rel="next"]:hover>svg {
+					@apply transition-all translate-x-1;
+				}
 			}
 		}
 	}
+}
+
+aside.right-sidebar-container {
+	@apply w-[400px]
 }

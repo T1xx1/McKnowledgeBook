@@ -7,7 +7,14 @@
 </script>
 
 {#if versionInfo}
-	<tr>
+	<tr class="*:px-2 *:py-3">
+		<td>
+			{#if versionInfo.name && versionInfo.page}
+				<a href={`/${versionInfo.page}`}>{versionInfo.name}</a>
+			{:else}
+				{versionInfo.name}
+			{/if}
+		</td>
 		<td>
 			{#if !versionInfo.name && versionInfo.page}
 				<a href={`/${versionInfo.page}`}>
@@ -18,10 +25,13 @@
 			{/if}
 		</td>
 		<td>
-			{#if versionInfo.name && versionInfo.page}
-				<a href={`/${versionInfo.page}`}>{versionInfo.name}</a>
-			{:else}
-				{versionInfo.name}
+			{#if versionInfo.resourcepackVersion}
+				{versionInfo.resourcepackVersion}
+			{/if}
+		</td>
+		<td>
+			{#if versionInfo.datapackVersion}
+				{versionInfo.datapackVersion}
 			{/if}
 		</td>
 		<td>
@@ -39,19 +49,9 @@
 				<a href={versionInfo.wiki}>Wiki</a>
 			{/if}
 		</td>
-		<td>
-			{#if versionInfo.resourcepackVersion}
-				{versionInfo.resourcepackVersion}
-			{/if}
-		</td>
-		<td>
-			{#if versionInfo.datapackVersion}
-				{versionInfo.datapackVersion}
-			{/if}
-		</td>
 	</tr>
 {:else}
-	<tr>
+	<tr class="*:px-2 *:py-3">
 		<td colspan="7">
 			<code>{_}</code>
 		</td>

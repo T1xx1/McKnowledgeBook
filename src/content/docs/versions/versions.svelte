@@ -22,18 +22,18 @@
 		<Switch bind:switched={showSnapshots} />
 	</div>
 
-	<table>
+	<table class="text-sm">
 		<tbody>
-			<tr>
-				<th>Version</th>
+			<tr class="*:px-2 *:py-3">
 				<th>Name</th>
+				<th>Version</th>
+				<th>Resourcepack version</th>
+				<th>Datapack version</th>
 				<th>Release date</th>
 				<th>Official article</th>
 				<th>
 					<a href="https://minecraft.wiki">Minecraft Wiki</a>
 				</th>
-				<th>Resourcepack version</th>
-				<th>Datapack version</th>
 			</tr>
 
 			{#each viewVersions as version}
