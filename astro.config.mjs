@@ -57,7 +57,7 @@ export default defineConfig({
 						'news',
 						{
 							slug: 'versions',
-							label: '25w31a',
+							label: 'Versions • 25w31a',
 							badge: {
 								variant: 'tip',
 								text: 'New'
@@ -148,8 +148,6 @@ export default defineConfig({
 				PageTitle: './src/components/pagetitle.astro',
 				ThemeSelect: './src/components/themeselect.astro',
 			}
-		}),
 		})
 	]
-});
 });
