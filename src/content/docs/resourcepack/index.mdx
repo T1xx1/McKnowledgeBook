@@ -10,7 +10,7 @@ lastUpdated: 2025-06-10
 
 import Wiki from "~/components/wiki.astro";
 
-import ResourcepackVersions from "./resourcepackversions.astro";
+import ResourcepackVersions from "./resourcepackversions.svelte";
 
 Resource packs are a [Project type](/projecttype) that allow players to change the aspect of every texture in [Minecraft](/minecraft) without writing code also allowing for more complex cases like animations, randomness, and weighted targeted entity changes.
 
@@ -37,11 +37,7 @@ Resource packs should only be tested for [Client](/client) side [Environment](/e
 
 ## Resource pack versions
 
-<details class="cursor-pointer">
-
-<ResourcepackVersions />
-
-</details>
+<ResourcepackVersions client:load />
 
 #### [Craft a resource pack](/craftresourcepack)
 
