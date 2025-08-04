@@ -4,13 +4,12 @@ aliases:
   - FPS boosting mods
   - FPS boosting
   - Boosting mods
-lastUpdated: 2025-04-26
+lastUpdated: 2025-08-04
 ---
 
 import Yb from '~/components/yb.astro';
 
 ## [Sodium](https://modrinth.com/mod/sodium)
-Sodium doesn't modify game mechanics so it's allowed in speed runs
 - Use a compact format of world geometry than vanilla [Minecraft](/minecraft) reducing the amount of video memory
 - Eliminates calculation of geometry when out of sight
 - Rewrites chunk generation and rendering system resulting in much faster world generation
@@ -18,24 +17,43 @@ Sodium doesn't modify game mechanics so it's allowed in speed runs
 - Disables out of sight animated textures for faster texture rendering
 - Tweaks light source which can take up a lot of computing power
 
+:::note
+Sodium doesn't modify game mechanics so it's allowed in speed runs
+:::
+
+## [VulkanMod](/vulkanmod)
+- Improved low level GPU language
+
+:::note
+Currently the VulkanMod is not compatible with Sodium and ImmediatelyFast
+:::
+
 ## [Lithium](https://modrinth.com/mod/lithium)
+- General improvement of game mechanics like game physics, mob AI and game ticking
+
+:::note
 Lithium doesn't modify game mechanics so it's allowed in speed runs
-- General improvement of game mechanics like game physics, mob ai and game ticking
+:::
+
+## [ImmediatelyFast](https://modrinth.com/mod/immediatelyfast)
+- Client side GPU optimizations
 
 ## [Entity culling](https://modrinth.com/mod/entityculling)
 - Prevents rendering of out of sight entities like entities behind walls
 
-## [Particle Culling](https://modrinth.com/mod/particle-culling)
-- Prevents particle rendering when out of sight
-
 ## [Dynamic FPS](https://modrinth.com/mod/dynamic-fps)
 - Adjust framerate and volume of the [Minecraft](/minecraft) window reducing processing usage when the window is reduced or hidden
 
-## [ImmediatelyFast](https://modrinth.com/mod/immediatelyfast)
-- Client side GPU optimizations
+## [Particle Culling](https://modrinth.com/mod/particle-culling)
+- Prevents particle rendering when out of sight
+
+:::note
+All versions of Particle Culling only work with [Minecraft](/minecraft) `1.12.2`
+:::
 
 ---
 
 #### Resources
 
 <Yb src="https://www.youtube.com/embed/L2xo8EmzJuw" />
+<Yb src="https://www.youtube.com/embed/z1iLtmeQ5ac" />
