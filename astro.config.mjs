@@ -106,7 +106,7 @@ export default defineConfig({
 					]
 				},
 				{
-					label: 'Modpackker',
+					label: '📦 Modpackker',
 					link: 'https://modpackker.vercel.app',
 				},
 				{
