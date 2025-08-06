@@ -8,18 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@astrojs/svelte':
-        specifier: ^7.1.0
-        version: 7.1.0(astro@5.12.0(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.40.0)(typescript@5.9.2))(jiti@2.4.2)(lightningcss@1.30.1)(svelte@5.37.3)(typescript@5.9.2)
       sharp:
         specifier: ^0.34.3
         version: 0.34.3
-      svelte:
-        specifier: ^5.37.3
-        version: 5.37.3
-      typescript:
-        specifier: ^5.9.2
-        version: 5.9.2
     devDependencies:
       '@astrojs/starlight':
         specifier: ^0.35.1
@@ -27,6 +18,9 @@ importers:
       '@astrojs/starlight-tailwind':
         specifier: ^4.0.1
         version: 4.0.1(@astrojs/starlight@0.35.1(astro@5.12.0(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.40.0)(typescript@5.9.2)))(tailwindcss@4.1.11)
+      '@astrojs/svelte':
+        specifier: ^7.1.0
+        version: 7.1.0(astro@5.12.0(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.40.0)(typescript@5.9.2))(jiti@2.4.2)(lightningcss@1.30.1)(svelte@5.37.3)(typescript@5.9.2)
       '@mc/metadata':
         specifier: workspace:*
         version: link:modules/metadata
@@ -39,9 +33,15 @@ importers:
       starlight-links-validator:
         specifier: ^0.17.0
         version: 0.17.0(@astrojs/starlight@0.35.1(astro@5.12.0(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.40.0)(typescript@5.9.2)))
+      svelte:
+        specifier: ^5.37.3
+        version: 5.37.3
       tailwindcss:
         specifier: ^4.1.11
         version: 4.1.11
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
 
   modules/metadata:
     devDependencies:
