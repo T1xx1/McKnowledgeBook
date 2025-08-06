@@ -1,17 +1,18 @@
 ---
 import { Image } from 'astro:assets';
 
-const { icon } = Astro.locals.starlightRoute.entry.data;
+const { icon } = Astro.locals.starlightRoute.entry.data as {
+	icon: typeof Astro.locals.starlightRoute.entry.data.icon | string;
+}
 ---
 
 <h1 id="_top" class="flex gap-3">
 	{
 		icon && (
 			<>
-				{/* @ts-expect-error */}
-				{icon.includes('https://') ?
+				{typeof icon === 'string' ?
 					<img src={icon} alt="Icon" class="size-10" />
-				:	<Image src={icon} alt="Icon" class="size-10" />}
+				: <Image src={icon} alt="Icon" class="size-10" />}
 			</>
 		)
 	}
