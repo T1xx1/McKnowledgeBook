@@ -7,7 +7,8 @@
 	"packageManager": "pnpm@10.13.1",
 	"scripts": {
 		"dev": "astro dev",
-		"build": "astro build"
+		"build": "pnpm run metadata:build && astro build",
+		"metadata:build": "cd modules/metadata && pnpm build"
 	},
 	"dependencies": {
 		"sharp": "^0.34.3"
