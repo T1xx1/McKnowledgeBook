@@ -78,11 +78,11 @@ export default defineConfig({
 						'edition',
 						'versions',
 						'vibrantvisuals',
-						'commands',
+						'command',
 						'resourcepack',
 						'datapack',
 						'tools',
-						'minecraftmisc'
+						'minecraftmiscellaneous'
 					]
 				},
 				{
@@ -97,7 +97,7 @@ export default defineConfig({
 						'plugin',
 						'shader',
 						'modpack',
-						'moddingmisc'
+						'moddingmiscellaneous'
 					]
 				},
 				{
