@@ -4,17 +4,15 @@ import { Image } from 'astro:assets';
 import book from '~/assets/book.webp';
 
 type Props = {
-	path: string;
+	src: string;
 	name?: string;
 };
 
-const { path, name } = Astro.props;
-
-const url = new URL(path, 'https://www.minecraft.net/en-us/article/');
+const { src, name } = Astro.props;
 ---
 
 <a
-	href={url.href}
+	href={src}
 	class="relative bottom-[-7px] mx-[1px] w-fit inline-flex gap-1.5 items-center text-[#2A641C]"
 >
 	<Image src={book} alt="Minecraft blog" class="size-6" />
