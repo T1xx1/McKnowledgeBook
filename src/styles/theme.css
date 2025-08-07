@@ -1,7 +1,7 @@
 @theme {
-	--color-primary: #56AD56;
-	--color-secondary: #3D7A3D;
-	--color-tertiary: #2A592A;
+	--color-primary: #56ad56;
+	--color-secondary: #3d7a3d;
+	--color-tertiary: #2a592a;
 
 	--font-roboto: 'Roboto';
 
@@ -24,4 +24,8 @@
 	--color-gray-900: #151a13;
 
 	--font-sans: var(--font-primary);
+}
+
+@utility pixelated {
+	image-rendering: pixelated;
 }

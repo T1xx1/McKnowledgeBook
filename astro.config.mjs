@@ -65,7 +65,8 @@ export default defineConfig({
 						},
 						'chasetheskies',
 						'dialogcommand',
-						'vibrantvisuals'
+						'vibrantvisuals',
+						'tools'
 					]
 				},
 				{
@@ -80,6 +81,7 @@ export default defineConfig({
 						'commands',
 						'resourcepack',
 						'datapack',
+						'tools',
 						'minecraftmisc'
 					]
 				},
