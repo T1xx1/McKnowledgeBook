@@ -81,6 +81,7 @@ export default defineConfig({
 						'command',
 						'resourcepack',
 						'datapack',
+						'launcher',
 						'tools',
 						'minecraftmiscellaneous'
 					]
@@ -97,6 +98,7 @@ export default defineConfig({
 						'plugin',
 						'shader',
 						'modpack',
+						'modrinth',
 						'moddingmiscellaneous'
 					]
 				},
