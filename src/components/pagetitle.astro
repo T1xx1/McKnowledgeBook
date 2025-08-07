@@ -1,24 +1,45 @@
 ---
+import { Badge } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
-const { icon } = Astro.locals.starlightRoute.entry.data as {
-	icon: typeof Astro.locals.starlightRoute.entry.data.icon | string;
-}
+const { title, aliases, icon, sidebar } = Astro.locals.starlightRoute.entry.data;
 ---
 
-<h1 id="_top" class="flex gap-3">
+<div>
+	<h1 id="_top" class={`flex gap-3 items-center ${sidebar.badge ? 'text-(--sl-badge-tip-border)/75' : ''}`}>
+		{
+			icon && (
+				<>
+					{typeof icon === 'string' ?
+						<img src={icon} alt="Icon" class="size-10" />
+					:	<Image src={icon} alt="Icon" class="size-10" />}
+				</>
+			)
+		}
+
+		{Astro.locals.starlightRoute.entry.data.title}
+
+		{
+			sidebar.badge && (
+				<div class="-mt-3.5">
+					{sidebar.badge && <Badge variant={sidebar.badge.variant} text={sidebar.badge.text} />}
+				</div>
+			)
+		}
+	</h1>
+
 	{
-		icon && (
-			<>
-				{typeof icon === 'string' ?
-					<img src={icon} alt="Icon" class="size-10" />
-				: <Image src={icon} alt="Icon" class="size-10" />}
-			</>
+		aliases && (
+			<div class="flex gap-1.5">
+				{aliases.map(
+					(alias) =>
+						alias !== title &&
+						alias !== title + 's' && <span class="text-sm text-gray-500">{alias}</span>
+				)}
+			</div>
 		)
 	}
-
-	{Astro.locals.starlightRoute.entry.data.title}
-</h1>
+</div>
 
 <style>
 	@layer starlight.core {

@@ -4,12 +4,14 @@ import { docsSchema } from '@astrojs/starlight/schema';
 
 export const collections = {
 	docs: defineCollection({
-		loader: docsLoader(), schema: docsSchema({
+		loader: docsLoader(),
+		schema: docsSchema({
 			extend: ({ image }) => {
 				return z.object({
-					icon: image().optional(),
+					aliases: z.array(z.string()).optional(),
+					icon: z.union([image().optional(), z.string()]),
 				});
-			}
-		})
+			},
+		}),
 	}),
 };
