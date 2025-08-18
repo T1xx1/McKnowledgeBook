@@ -83,7 +83,18 @@ export default defineConfig({
 						'datapack',
 						'launcher',
 						'tools',
-						'minecraftmiscellaneous'
+						{
+							label: 'Miscellaneous',
+							items: [
+								'besttoolsenchantments',
+								'editionsdiffs',
+								'unobtainableresources',
+								'unusedbedrockfeatures',
+								'unusedjavafeatures',
+								'wearblocks'
+							],
+							collapsed: true
+						}
 					]
 				},
 				{
@@ -99,7 +110,14 @@ export default defineConfig({
 						'shader',
 						'modpack',
 						'modrinth',
-						'moddingmiscellaneous'
+						'moddingtools',
+						{
+							label: 'Miscellaneous',
+							items: [
+								'fpsboostingmods'
+							],
+							collapsed: true
+						}
 					]
 				},
 				{
