@@ -81,6 +81,7 @@ export default defineConfig({
 						'datapack',
 						'launcher',
 						'tools',
+						'minecraftwiki',
 						{
 							label: 'Miscellaneous',
 							items: [
