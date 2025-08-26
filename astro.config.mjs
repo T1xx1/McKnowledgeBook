@@ -72,20 +72,27 @@ export default defineConfig({
 					items: [
 						'minecraft',
 						'vanilla',
-						'environment',
 						'edition',
+						{
+							label: 'Environments',
+							items: [
+								'environment',
+								'client',
+								'server'
+							],
+						},
+						'launcher',
 						'versions',
-						'vibrantvisuals',
-						'command',
 						'resourcepack',
 						'datapack',
-						'launcher',
+						'vibrantvisuals',
 						'tools',
 						'minecraftwiki',
 						{
 							label: 'Miscellaneous',
 							items: [
 								'besttoolsenchantments',
+								'command',
 								'editionsdiffs',
 								'formattingcodes',
 								'unobtainableresources',
