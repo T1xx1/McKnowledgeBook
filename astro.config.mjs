@@ -3,6 +3,7 @@ import starlight from '@astrojs/starlight';
 import svelte from '@astrojs/svelte';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
+import starlightImageZoom from 'starlight-image-zoom';
 import starlightLinksValidator from 'starlight-links-validator';
 
 // https://astro.build/config
@@ -14,7 +15,7 @@ export default defineConfig({
 	integrations: [
 		svelte(),
 		starlight({
-			plugins: [starlightLinksValidator()],
+			plugins: [starlightImageZoom(), starlightLinksValidator()],
 			title: 'McKnowledgeBook',
 			favicon: '/favicon.ico',
 			logo: {
@@ -75,11 +76,7 @@ export default defineConfig({
 						'edition',
 						{
 							label: 'Environments',
-							items: [
-								'environment',
-								'client',
-								'server'
-							],
+							items: ['environment', 'client', 'server'],
 						},
 						'launcher',
 						'versions',
@@ -112,22 +109,11 @@ export default defineConfig({
 						'moddingenvironment',
 						{
 							label: 'Loaders',
-							items: [
-								'loader',
-								'modloader',
-								'pluginloader',
-								'shaderloader'
-							],
+							items: ['loader', 'modloader', 'pluginloader', 'shaderloader'],
 						},
 						{
 							label: 'Project types',
-							items: [
-								'projecttype',
-								'mod',
-								'plugin',
-								'shader',
-								'modpack',
-							],
+							items: ['projecttype', 'mod', 'plugin', 'shader', 'modpack'],
 						},
 						'modrinth',
 						'moddingtools',

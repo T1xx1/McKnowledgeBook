@@ -30,6 +30,9 @@ importers:
       astro:
         specifier: ^5.12.0
         version: 5.12.0(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.40.0)(typescript@5.9.2)
+      starlight-image-zoom:
+        specifier: ^0.13.0
+        version: 0.13.0(@astrojs/starlight@0.35.1(astro@5.12.0(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.40.0)(typescript@5.9.2)))
       starlight-links-validator:
         specifier: ^0.17.0
         version: 0.17.0(@astrojs/starlight@0.35.1(astro@5.12.0(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.40.0)(typescript@5.9.2)))
@@ -1925,6 +1928,12 @@ packages:
 
   space-separated-tokens@2.0.2:
     resolution: {integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==}
+
+  starlight-image-zoom@0.13.0:
+    resolution: {integrity: sha512-7K/7gshnKooYd4ePy5vtyv1jFoFVNUb8IoXWDcnY69+nxvmLATNrmOzD2M4TJ/aKynPSBSM6j9ia4s/PPy/JGA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@astrojs/starlight': '>=0.32.0'
 
   starlight-links-validator@0.17.0:
     resolution: {integrity: sha512-D+j0W7Z6CVSxPlt8jskBcApqaAU16JmuxE4c483Xj2sWJteiz0wW2xvk0cG3o/cW1q9x44Ezc668OnUi3a5LAA==}
@@ -4723,6 +4732,16 @@ snapshots:
   source-map@0.7.4: {}
 
   space-separated-tokens@2.0.2: {}
+
+  starlight-image-zoom@0.13.0(@astrojs/starlight@0.35.1(astro@5.12.0(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.40.0)(typescript@5.9.2))):
+    dependencies:
+      '@astrojs/starlight': 0.35.1(astro@5.12.0(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.40.0)(typescript@5.9.2))
+      mdast-util-mdx-jsx: 3.2.0
+      rehype-raw: 7.0.0
+      unist-util-visit: 5.0.0
+      unist-util-visit-parents: 6.0.1
+    transitivePeerDependencies:
+      - supports-color
 
   starlight-links-validator@0.17.0(@astrojs/starlight@0.35.1(astro@5.12.0(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.40.0)(typescript@5.9.2))):
     dependencies:

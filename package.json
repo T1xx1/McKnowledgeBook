@@ -20,6 +20,7 @@
 		"@mc/metadata": "workspace:*",
 		"@tailwindcss/vite": "^4.1.11",
 		"astro": "^5.12.0",
+		"starlight-image-zoom": "^0.13.0",
 		"starlight-links-validator": "^0.17.0",
 		"svelte": "^5.37.3",
 		"tailwindcss": "^4.1.11",
