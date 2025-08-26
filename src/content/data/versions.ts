@@ -14,6 +14,16 @@ type VersionInfo = {
 
 export const versionsInfo = new Map<Loose<McVersion>, VersionInfo>([
 	[
+		'25w35a',
+		{
+			date: '2025-08-26',
+			article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w35a',
+			wiki: 'https://minecraft.wiki/w/Java_Edition_25w35a',
+			resourcepackVersion: '67.0',
+			datapackVersion: '85.0',
+		},
+	],
+	[
 		'25w34b',
 		{
 			date: '2025-08-19',
