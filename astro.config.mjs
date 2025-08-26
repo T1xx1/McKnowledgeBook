@@ -87,6 +87,7 @@ export default defineConfig({
 							items: [
 								'besttoolsenchantments',
 								'editionsdiffs',
+								'formattingcodes',
 								'unobtainableresources',
 								'unusedbedrockfeatures',
 								'unusedjavafeatures',
