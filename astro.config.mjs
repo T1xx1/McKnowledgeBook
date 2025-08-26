@@ -102,12 +102,25 @@ export default defineConfig({
 						'modding',
 						'minecraftsobfuscatedcodebase',
 						'moddingenvironment',
-						'loader',
-						'projecttype',
-						'mod',
-						'plugin',
-						'shader',
-						'modpack',
+						{
+							label: 'Loaders',
+							items: [
+								'loader',
+								'modloader',
+								'pluginloader',
+								'shaderloader'
+							],
+						},
+						{
+							label: 'Project types',
+							items: [
+								'projecttype',
+								'mod',
+								'plugin',
+								'shader',
+								'modpack',
+							],
+						},
 						'modrinth',
 						'moddingtools',
 						{
