@@ -39,7 +39,7 @@
 					<a href="/minecraft">Minecraft</a>
 					<a href="/versions">Version</a>
 				</th>
-				<th>Resource pack version</th>
+				<th>Datapack version</th>
 			</tr>
 
 			{#each viewVersions as version}
