@@ -1,0 +1,23 @@
+---
+import Label from './label.astro';
+
+type Props = {
+	type: 'je' | 'be' | 'pocket';
+};
+
+const { type } = Astro.props;
+---
+
+{
+	type === 'je' ?
+		<Label class="bg-red-500/50">
+			<a href="/javaedition">JE</a> only
+		</Label>
+	: type === 'be' ?
+		<Label class="bg-green-500/50">
+			<a href="/bedrockedition">BE</a> only
+		</Label>
+	:	<Label class="bg-blue-500/50">
+			<a href="/pocketedition">Pocket</a> only
+		</Label>
+}
