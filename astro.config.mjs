@@ -63,9 +63,7 @@ export default defineConfig({
 							},
 						},
 						'chasetheskies',
-						'dialogcommand',
-						'vibrantvisuals',
-						'tools',
+						'vibrantvisuals'
 					],
 				},
 				{
