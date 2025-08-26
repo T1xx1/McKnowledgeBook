@@ -32,7 +32,7 @@
 				<th>Release date</th>
 				<th>Official article</th>
 				<th>
-					<a href="https://minecraft.wiki">Minecraft Wiki</a>
+					<a href="/minecraftwiki">Minecraft Wiki</a>
 				</th>
 			</tr>
 
