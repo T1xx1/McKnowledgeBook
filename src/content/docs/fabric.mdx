@@ -7,6 +7,10 @@ lastUpdated: 2025-04-29
 icon: ~/assets/fabric.svg
 ---
 
+import { fabricBindings } from '@mc/metadata';
+
+import Bindings from '~/components/bindings.svelte';
+
 #### [Website](https://fabricmc.net)
 - [Discord](https://discord.gg/v6v4pMv)
 - [GitHub](https://github.com/FabricMC/fabric)
@@ -23,3 +27,13 @@ The only downside, is the additional processing cost of the intermediate Sinytra
 :::
 
 Due to an internal dispute in the Fabric core team, some members decided to split from it, fork Fabric and create the [Quilt](/quilt) loader.
+
+## Bindings
+
+<Bindings client:load data={fabricBindings} />
+
+---
+
+#### Related
+
+- [Quilt](/quilt)

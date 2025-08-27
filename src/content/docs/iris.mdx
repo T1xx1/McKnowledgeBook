@@ -6,8 +6,16 @@ lastUpdated: 2025-04-29
 icon: ~/assets/iris.svg
 ---
 
+import { irisBindings } from '@mc/metadata';
+
+import Bindings from '~/components/bindings.svelte';
+
 #### [View](https://irisshaders.dev)
 
 import NoContent from '~/components/nocontent.astro';
 
 <NoContent />
+
+## Bindings
+
+<Bindings client:load type="project" data={irisBindings} />

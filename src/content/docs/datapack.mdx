@@ -8,10 +8,11 @@ aliases:
 lastUpdated: 2025-08-27
 ---
 
+import { versionsInfo } from '~/data/versions';
+
+import Bindings from '~/components/bindings.svelte';
 import Wiki from '~/components/wiki.astro';
 import Yb from '~/components/yb.astro';
-
-import DatapackVersions from './datapackversions.svelte';
 
 Datapacks are a [Project type](/projecttype) that uses the [Vanilla](/vanilla) engine to extend some [Minecraft](/minecraft) functionalities like advancements, dimensions, enchantments, loots, recipes, structure generation and terrain generation.
 
@@ -19,7 +20,7 @@ It's a folder or a `zip` containing static files like `json`s and `png`s files w
 
 #### Datapack versions
 
-<DatapackVersions client:load />
+<Bindings client:load data={Object.fromEntries([...versionsInfo].map(([version, info]) => [version, info.datapackVersion]))} />
 
 #### Datapack store location
 

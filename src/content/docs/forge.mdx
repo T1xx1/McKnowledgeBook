@@ -6,6 +6,10 @@ lastUpdated: 2025-04-29
 icon: ~/assets/forge.svg
 ---
 
+import { forgeBindings } from '@mc/metadata';
+
+import Bindings from '~/components/bindings.svelte';
+
 #### [Website](https://files.minecraftforge.net)
 - [Discord](https://discord.minecraftforge.net)
 
@@ -15,3 +19,13 @@ Over the years the Forge team keep adding small features to the loader but that 
 To create a better experience for the modding space some developers created the [Fabric](/fabric) loader was a lightweight mod loader.
 
 Due to an internal dispute with project lead some members of the core team decided to split from it, fork Forge and create a new loader [NeoForge](/neoforge).
+
+## Bindings
+
+<Bindings client:load data={forgeBindings} />
+
+---
+
+#### Related
+
+- [NeoForge](/neoforge)

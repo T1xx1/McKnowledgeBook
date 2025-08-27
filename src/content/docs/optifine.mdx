@@ -6,10 +6,15 @@ lastUpdated: 2025-04-29
 icon: ~/assets/optifine.svg
 ---
 
+import { optifineBindings } from '@mc/metadata';
+
+import Bindings from '~/components/bindings.svelte';
 import Yb from '~/components/yb.astro';
 
 #### [Website](https://optifine.net/home)
 
----
-
 <Yb src="https://youtube.com/embed/_2wvHoZOhrI" />
+
+## Bindings
+
+<Bindings client:load type="project" data={optifineBindings} />
