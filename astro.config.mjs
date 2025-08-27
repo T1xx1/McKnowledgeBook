@@ -105,20 +105,7 @@ export default defineConfig({
 						'vibrantvisuals',
 						'tools',
 						'minecraftwiki',
-						{
-							label: 'Miscellaneous',
-							items: [
-								'besttoolsenchantments',
-								'command',
-								'editionsdiffs',
-								'formattingcodes',
-								'unobtainableresources',
-								'unusedbedrockfeatures',
-								'unusedjavafeatures',
-								'wearblocks',
-							],
-							collapsed: true,
-						},
+						'misc'
 					],
 				},
 				{
@@ -137,11 +124,7 @@ export default defineConfig({
 						},
 						'modrinth',
 						'moddingtools',
-						{
-							label: 'Miscellaneous',
-							items: ['fpsboostingmods'],
-							collapsed: true,
-						},
+						'moddingmisc',
 					],
 				},
 				{
