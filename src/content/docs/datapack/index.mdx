@@ -5,28 +5,28 @@ aliases:
   - Datapacks
   - Data pack
   - Data packs
-lastUpdated: 2025-06-10
+lastUpdated: 2025-08-27
 ---
 
-import Wiki from "~/components/wiki.astro";
-import Yb from "~/components/yb.astro";
+import Wiki from '~/components/wiki.astro';
+import Yb from '~/components/yb.astro';
 
-import DatapackVersions from "./datapackversions.svelte";
+import DatapackVersions from './datapackversions.svelte';
 
 Datapacks are a [Project type](/projecttype) that uses the [Vanilla](/vanilla) engine to extend some [Minecraft](/minecraft) functionalities like advancements, dimensions, enchantments, loots, recipes, structure generation and terrain generation.
 
-It's a folder or a `.zip` containing `.json` files with a `pack.mcmeta`.
-
-#### Datapack store location
-
-| [Client](/client)                | Location                                                 |
-| -------------------------------- | -------------------------------------------------------- |
-| [Minecraft](/minecraft) launcher | `.minecraft/saves/<world>/datapacks`                     |
-| [Modrinth](/modrinth) app        | `ModrinthApp/profiles/<profile>/saves/<world>/datapacks` |
+It's a folder or a `zip` containing static files like `json`s and `png`s files with a `pack.mcmeta`.
 
 #### Datapack versions
 
 <DatapackVersions client:load />
+
+#### Datapack store location
+
+| [Launcher](/launcher)                    | Location                                                                                                                                                                                          |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Minecraft launcher](/minecraftlauncher) | Windows `%AppData%/Roaming/.minecraft/saves/<world>/datapacks` <br /> macOS `~/Library/Application Support/minecraft/saves/<world>/datapacks` <br /> Linux `~/.minecraft/saves/<world>/datapacks` |
+| [ModrinthApp](/modrinthapp)              | Windows `%AppData%/Roaming/ModrinthApp/profiles/<profile>/saves/<world>/datapacks` <br /> macOS ? <br /> Linux ?                                                                                                                        |
 
 #### [Datapacks VS mods](/datapackvsmod)
 
@@ -37,4 +37,9 @@ It's a folder or a `.zip` containing `.json` files with a `pack.mcmeta`.
 #### Resources
 
 - <Wiki src="https://minecraft.wiki/w/Data_pack" />
+
 <Yb src="https://youtube.com/embed/EBsEDkFpPlI" />
+
+#### Related
+
+- [Resource pack](/resourcepack)

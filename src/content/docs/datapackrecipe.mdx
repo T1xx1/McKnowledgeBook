@@ -1,0 +1,204 @@
+---
+title: Datapack recipe
+aliases:
+  - Datapack recipe
+  - Datapack recipes
+lastUpdated: 2025-08-27
+---
+
+import { FileTree, Steps } from '@astrojs/starlight/components';
+
+import NoContent from '~/components/nocontent.astro';
+import Wiki from '~/components/wiki.astro';
+
+Recipes let you define how items are crafted.
+
+:::caution
+Starting from `1.21 • 48` the folder containing recipes has been renamed from `recipes` to `recipe`
+:::
+
+:::note
+View [Vanilla](/vanilla) recipe here [Mc Assets • Recipes](https://mcasset.cloud/1.21.8/data/minecraft/recipe)
+:::
+
+<Steps>
+
+1. Create a folder named `recipe` in you [Datapack](/datapack) namespace
+
+   <FileTree>
+	- \<datapack\>
+		- pack.mcmeta
+		- pack.png
+		- data
+			- minecraft
+				- ...
+			- \<namespace\>
+				- recipe
+					- ...
+	</FileTree>
+
+2. Create a `<recipe>.json` file for your recipe
+
+	:::note
+	The name of the `json` file will not affect the recipe but it's good pratice to name it after the item you want to craft.
+	Even [Minecraft](/minecraft) devs use this convention for [Vanilla](/vanilla).
+	:::
+
+3. Choose how you want to craft your item
+
+	| Type                                                          | Name               | Description                                                                  |
+	| ------------------------------------------------------------- | ------------------ | ---------------------------------------------------------------------------- |
+	| [`minecraft:blasting`](#blasting)                             | Blasting           | Items cooked in a [Blast furnace](https://minecraft.wiki/w/Blast_Furnace)    |
+	| [`minecraft:campfire_cooking`](#campfire_cooking)             | Campfire cooking   | Items cooked on a [Campfire](https://minecraft.wiki/w/Campfire)              |
+	| [`minecraft:crafting_decorated_pot`](#crafting_decorated_pot) | Decorated pot      | [Decorated pot](https://minecraft.wiki/w/Decorated_Pot#Crafting) recipe      |
+	| [`minecraft:crafting_shaped`](#crafting_shaped)               | Crafting shaped    | Items and their placement                                                    |
+	| [`minecraft:crafting_shapeless`](#crafting_shapeless)         | Crafting shapeless | Only items recipe                                                            |
+	| [`minecraft:crafting_special_*`](#crafting_special_)          | Crafting special   | Special crafting methods                                                     |
+	| [`minecraft:crafting_transmute`](#crafting_transmute)         | Crafting transmute | Items trasmuted into other items                                             |
+	| [`minecraft:smelting`](#smelting)                             | Smelting           | Items cooked in a [Furnace](https://minecraft.wiki/w/Furnace)                |
+	| [`minecraft:smithing_transform`](#smithing_transform)         | Smithing           | Items crafted in a [Smithing table](https://minecraft.wiki/w/Smithing_table) |
+	| [`minecraft:smithing_trim`](#smithing_trim)                   | Smithing trim      | Items trimmed in a [Smithing table](https://minecraft.wiki/w/Smithing_table) |
+	| [`minecraft:smoking`](#smoking)                               | Smoking            | Items cooked in a [Smoker](https://minecraft.wiki/w/Smoker)                  |
+	| [`minecraft:stonecutting`](#stonecutting)                     | Stonecutting       | Items cut in a [Stonecutter](https://minecraft.wiki/w/Stonecutter)           |
+
+4. Done
+
+</Steps>
+
+## Types
+
+:::note
+[Mods](/mod) can introduce new recipe types usually defined as `<namespace>:<recipe_type>`
+:::
+
+#### `blasting`
+
+<NoContent />
+
+#### `campfire_cooking`
+
+```json
+{
+	"type": "minecraft:campfire_cooking",
+	"category": "food", // Optional. Defaults to `misc`. Category inside the recipe book
+	"cookingtime": 600, // Optional. Default to 100. Time in milliseconds the item has to cook
+	"experience": 0.35, // Experience given after cooking
+	"ingredient": "minecraft:potato", // Item to cook
+	"result": {
+		"id": "minecraft:baked_potato" // Result item after cooking
+	}
+}
+```
+
+#### `crafting_decorated_pot`
+
+<NoContent />
+
+#### `crafting_shaped`
+
+```json
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc", // Optional. Defaults to `misc`. Category inside the recipe book
+	"key": { // Key-value pairs to easily describe items inside the `pattern` field
+		"A": "minecraft:milk_bucket",
+		"B": "minecraft:sugar",
+		"C": "minecraft:wheat",
+		"E": "#minecraft:eggs"
+	},
+	"pattern": [ // Recipe pattern
+		"AAA",
+		"BEB",
+		"CCC"
+	],
+	"result": {
+		"count": 1, // Optional. Defaults to 1.
+		"id": "minecraft:cake"
+	}
+}
+```
+
+:::note
+Recipes are automatically mirrored on the vertical axis. Asymmetrical recipe will still work.
+:::
+
+:::note
+An empty character can be used to create empty slots in the crafting table without declaring the `minecraft:air` item in the `key` field.
+:::
+
+#### `crafting_shapeless`
+
+```json
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "equipment", // Optional. Defaults to `misc`. Category inside the recipe book
+	"ingredients": [
+		"minecraft:iron_ingot",
+		"minecraft:flint"
+	],
+	"result": {
+		"count": 1, // Optional. Defaults to 1.
+		"id": "minecraft:flint_and_steel"
+	}
+}
+```
+
+#### `crafting_special_*`
+
+<NoContent />
+
+#### `crafting_transmute`
+
+<NoContent />
+
+#### `smelting`
+
+<NoContent />
+
+#### `smithing_transform`
+
+<NoContent />
+
+#### `smithing_trim`
+
+<NoContent />
+
+#### `smoking`
+
+<NoContent />
+
+#### `stonecutting`
+
+<NoContent />
+
+## Other information
+
+:::caution
+Starting from `1.20.5` the `result` field has been changed from
+
+```json
+{
+	"result": {
+		"item": "minecraft:diamond"
+	}
+}
+```
+
+to
+
+```json
+{
+	"result": {
+		"id": "minecraft:diamond"
+	}
+}
+```
+
+:::
+
+---
+
+#### Resources
+
+- <Wiki src="https://minecraft.wiki/w/Data_pack" name="Data pack" />
+- <Wiki src="https://minecraft.wiki/w/Recipe" name="Recipe" />

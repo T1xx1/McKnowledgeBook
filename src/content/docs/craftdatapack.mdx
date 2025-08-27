@@ -2,27 +2,147 @@
 title: Craft a datapack
 aliases:
   - Craft a datapack
-lastUpdated: 2025-07-30
+lastUpdated: 2025-08-27
 ---
 
+import { FileTree, Steps } from '@astrojs/starlight/components';
+
+import Wiki from '~/components/wiki.astro';
 import Yb from '~/components/yb.astro';
 
-...
+## Prerequisites
 
-Starting from [`25w21a`](/25w21a), datapacks can be easily created with the right datapack version, in game, with the `/datapack create <id> <name>`  [Command](/command).
+- Knowledge about [Datapacks](/datapack)
+- Be sure that what you want to achieve is possible with [Datapacks](/datapack). [Datapack VS mods](/datapackvsmod)
+- A little knowledge about [JSON](https://en.wikipedia.org/wiki/JSON)
+- A text editor like notepad or a code editor like [VSCode](https://code.visualstudio.com)
+
+## Guide
+
+<Steps>
+
+1.  Create a new folder with the name of your datapack and open it in your editor
+
+    :::note
+    Consider creating your datapack directly inside a [Minecraft](/minecraft) world save ([Datapack folder location](/datapack#datapack-store-location)) to quickly test while developing and later export it in a better place.
+
+    Remember to execute `/reload` after any datapack change to load the new chages into the game without exiting the world.
+    :::
+
+2.  In the root folder of your datapack create a
+
+    #### `pack.mcmeta`
+
+    The `pack.mcmeta` describes information about your datapack
+
+    ```json
+    // pack.mcmeta
+    {
+    	"pack": {
+    		"description": "This is the description of your datapack",
+    		"pack_format": 8,
+    		"supported_formats": [8, 9]
+    	}
+    }
+    ```
+
+    The `description` field can use [Formatting codes](/formattingcodes).
+
+    The `pack_format` field is the version of the datapack format. This field is related to the [Minecraft](/minecraft) [Version](/version) you want your datapack to be compatible with. Check out which [Datapack versions](/datapack#datapack-versions) you should set.
+
+    :::note
+    Starting from [`25w21a`](/25w21a), datapacks can be easily created with the right [Datapack version](/datapack#datapack-versions), in game, with the `/datapack create <id> <name>` [Command](/command).
+    :::
+
+    New [Minecraft](/minecraft) [Versions](/version) may introduce new features to datapacks by bumping the [Datapack version](/datapack#datapack-versions). Starting from `1.20.2`, if your datapack uses functionalities that haven't been changed in the version bump, it's possible to set the `supported_formats` field to make your datapack compatible with new [Minecraft](/minecraft) [Versions](/versions) without changing the code nor the `pack_format` field.
+    Set the first number of the `supported_formats` field to the lowest [Datapack version](/datapack#datapack-versions) you support, and the second number to the highest [Datapack version](/datapack#datapack-versions) you support.
+    If your datapack uses functionalities that have been affected by the version bump, you have to bump you `pack_format` field and also update the code according to the chages made.
+
+    :::note
+    I personally recommend to set the lowest supported version to the same version of `pack_format` and not use older versions than the "base" version your developing you datapack for.
+    :::
+
+    #### `pack.png`
+
+    The `pack.png` is the icon that will be displayed in the datapack selection menu. It's optional and it has to be a square
+
+3.  Create a `data` folder
+
+	This folder will contain all the code of your datapack organized in namespaces
+	
+	For example if you want to change some [Minecraft](/minecraft) feature create a `minecraft` folder namespace and the code in this folder will overwrite the corrisponding file inside of [Minecraft](/minecraft) [Vanilla](/vanilla).
+	
+	:::note
+	You can inspect [Minecraft](/minecraft) [Vanilla](/vanilla) files here [Mc Assets](https://mcasset.cloud)
+	:::
+
+	If you want to add new feature create a new folder namespace and the files in this folder will be added to the base game.
+
+	:::note
+	If your playing with a [Modpack](/modpack) be sure that the namespace your choosing it's not used anywhere else otherwise you are still going to be overwriting other [Mods](/mod) or [Datapacks](/datapack) functionalities.
+	:::
+
+	:::note
+	Namespaces can also be used to orginaze your code with datapacks with a lot of features.
+	:::
+
+	So far your datapack should look something like this
+
+	<FileTree>
+	- \<datapack\>
+		- pack.mcmeta
+		- pack.png
+		- data
+			- minecraft
+				- ...
+			- \<namespace\>
+				- ...
+			- \<namespace2\>
+				- ...
+	</FileTree>
+
+4. Add features to your datapack
+
+	- [Advancements](/datapackadvancement)
+	- [Dimensions](/datapackdimension)
+	- [Enchantments](/datapackenchantment)
+	- [Functions](/datapackfunction)
+	- [Loot tables (Drops)](/datapackloottable)
+	- [Predicates](/datapackpredicate)
+	- [Recipes](/datapackrecipe)
+	- [Structures](/datapackstructure)
+	- [Tags](/datapacktag)
+	- [World generation](/datapackworldgeneration)
+
+5. Done
+	
+	:::note
+	[Datapacks](/datapack) folder can also be zipped to save space and reduce loading time.
+
+</Steps>
 
 ## Examples
+
 Here's some code examples of datapacks I've made:
+
 - [Beehaviour](https://github.com/cristian-5/Beehaviour)
 - [Delicate](https://github.com/T1xx1/Delicate)
 - [BE boats](https://github.com/T1xx1/Beboats)
 
 ## Generators
-Since datapacks are most JSON files they can be generated with online tools like [Crafting](https://crafting.thedestruc7i0n.ca) or [Misode](https://misode.github.io).
-When aiming for a more complex datapack maybe a hybrid or complete manual approach it's better.
-Keep in mind that sometimes these generators won't have the latest version right away or a niece snapshot since the datapack syntax has been changing a lot through the years.
+
+Since [Datapacks](/datapack) are static files, they can also be generated with online tools like [Crafting](https://crafting.thedestruc7i0n.ca) or [Misode](https://misode.github.io).
+When aiming for a more complex datapack, maybe a hybrid or complete manual approach is better.
+Keep in mind that sometimes these generators won't have the latest version right away or a niche snapshot since the datapack syntax can change a lot with new [Versions](/version).
+
 ---
 
 #### Resources
 
+- <Wiki src="https://minecraft.wiki/w/Tutorial:Creating_a_data_pack" />
+
 <Yb src="https://youtube.com/embed/ac6V5-KT6Rg" />
+
+#### Related
+
+- [Craft a resource pack](/craftresourcepack)
