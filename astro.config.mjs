@@ -91,7 +91,7 @@ export default defineConfig({
 								'craftdatapack',
 								'datapackadvancement',
 								'datapackdimension',
-								'datapackenchantments',
+								'datapackenchantment',
 								'datapackfunction',
 								'datapackloottable',
 								'datapackpredicate',
