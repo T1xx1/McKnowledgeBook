@@ -133,7 +133,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Project types',
-							items: ['projecttype', 'mod', 'plugin', 'shader', 'modpack'],
+							items: ['projecttype', 'mod', 'modpack', 'plugin', 'shader'],
 						},
 						'modrinth',
 						'moddingtools',
