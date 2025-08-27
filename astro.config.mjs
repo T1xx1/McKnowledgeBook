@@ -77,7 +77,11 @@ export default defineConfig({
 							items: ['environment', 'client', 'server'],
 						},
 						'launcher',
-						'versions',
+						{
+							label: 'Versions',
+							items: ['versions', 'chasetheskies', 'springtolife'],
+							collapsed: true,
+						},
 						'resourcepack',
 						{
 							label: 'Datapack',
