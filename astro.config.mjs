@@ -114,6 +114,7 @@ export default defineConfig({
 						'modding',
 						'minecraftsobfuscatedcodebase',
 						'moddingenvironment',
+						'serverengine',
 						{
 							label: 'Loaders',
 							items: ['loader', 'modloader', 'pluginloader', 'shaderloader'],
