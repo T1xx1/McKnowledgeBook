@@ -123,6 +123,7 @@ export default defineConfig({
 							items: ['projecttype', 'mod', 'modpack', 'plugin', 'shader'],
 						},
 						'modrinth',
+						'modpackker',
 						'moddingtools',
 						'moddingmisc',
 					],
