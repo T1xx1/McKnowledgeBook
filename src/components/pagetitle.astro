@@ -6,7 +6,7 @@ const { title, aliases, icon, sidebar } = Astro.locals.starlightRoute.entry.data
 ---
 
 <div>
-	<h1 id="_top" class={`flex gap-3 items-center ${sidebar.badge ? sidebar.badge.variant === 'tip' ? 'text-(--sl-badge-tip-border)/75' : 'text-(--sl-badge-caution-border)/75' : ''}`}>
+	<h1 id="_top" class={`flex flex-wrap gap-3 items-center ${sidebar.badge ? sidebar.badge.variant === 'tip' ? 'text-(--sl-badge-tip-border)/75' : 'text-(--sl-badge-caution-border)/75' : ''}`}>
 		{
 			icon && (
 				<>
