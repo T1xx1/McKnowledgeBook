@@ -114,11 +114,24 @@ export default defineConfig({
 						'modding',
 						'minecraftsobfuscatedcodebase',
 						'moddingenvironment',
-						'serverengine',
+						'projecttype',
+						'loader',
 						{
-							label: 'Loaders',
-							items: ['loader', 'modloader', 'pluginloader', 'shaderloader'],
+							label: 'Mods',
+							items: ['mod', 'modloader', 'modpack'],
 						},
+						{
+							label: 'Shaders',
+							items: [
+								'shader',
+								'shaderloader'
+							]
+						},
+						{
+							label: 'Plugins',
+							items: ['plugin', 'pluginloader'],
+						},
+						'serverengine',
 						{
 							label: 'Proxy servers',
 							items: [
@@ -126,10 +139,6 @@ export default defineConfig({
 								'serverenginevspluginloadervsproxyserver',
 								'craftservernetwork',
 							],
-						},
-						{
-							label: 'Project types',
-							items: ['projecttype', 'mod', 'modpack', 'plugin', 'shader'],
 						},
 						'modrinth',
 						'modpackker',
