@@ -105,7 +105,7 @@ export default defineConfig({
 						'vibrantvisuals',
 						'tools',
 						'minecraftwiki',
-						'misc'
+						'misc',
 					],
 				},
 				{
@@ -118,6 +118,14 @@ export default defineConfig({
 						{
 							label: 'Loaders',
 							items: ['loader', 'modloader', 'pluginloader', 'shaderloader'],
+						},
+						{
+							label: 'Proxy servers',
+							items: [
+								'proxyserver',
+								'serverenginevspluginloadervsproxyserver',
+								'craftservernetwork',
+							],
 						},
 						{
 							label: 'Project types',
