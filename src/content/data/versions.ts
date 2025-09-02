@@ -20,7 +20,29 @@ export const versionsInfo = new Map<Loose<McVersion>, VersionInfo>([
 			page: 'thecopperage',
 			article: 'https://www.minecraft.net/it-it/article/minecraft-java-edition-1-21-9',
 			wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.9',
-		}
+		},
+	],
+	[
+		'25w36b',
+		{
+			page: '25w36b',
+			date: '2025-09-02',
+			article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w36a',
+			wiki: 'https://minecraft.wiki/w/Java_Edition_25w36b',
+			resourcepackVersion: '68.0',
+			datapackVersion: '86.0'
+		},
+	],
+	[
+		'25w36a',
+		{
+			page: '25w36a',
+			date: '2025-09-02',
+			article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w35a',
+			wiki: 'https://minecraft.wiki/w/Java_Edition_25w36a',
+			resourcepackVersion: '68.0',
+			datapackVersion: '86.0'
+		},
 	],
 	[
 		'25w35a',
