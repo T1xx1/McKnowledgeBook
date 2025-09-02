@@ -58,6 +58,7 @@ export const versionsInfo = new Map<Loose<McVersion>, VersionInfo>([
 	[
 		'25w34b',
 		{
+			page: '25w34b',
 			date: '2025-08-19',
 			article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w34a',
 			wiki: 'https://minecraft.wiki/w/Java_Edition_25w34b',
@@ -68,6 +69,7 @@ export const versionsInfo = new Map<Loose<McVersion>, VersionInfo>([
 	[
 		'25w34a',
 		{
+			page: '25w34a',
 			date: '2025-08-19',
 			article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w34a',
 			wiki: 'https://minecraft.wiki/w/Java_Edition_25w34a',
