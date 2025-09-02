@@ -18,7 +18,7 @@ export const versionsInfo = new Map<Loose<McVersion>, VersionInfo>([
 		{
 			name: 'The Copper Age',
 			page: 'thecopperage',
-			article: 'https://www.minecraft.net/it-it/article/minecraft-java-edition-1-21-9',
+			article: 'https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-9',
 			wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.9',
 		},
 	],
@@ -59,7 +59,7 @@ export const versionsInfo = new Map<Loose<McVersion>, VersionInfo>([
 		'25w34b',
 		{
 			date: '2025-08-19',
-			article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w34b',
+			article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w34a',
 			wiki: 'https://minecraft.wiki/w/Java_Edition_25w34b',
 			resourcepackVersion: '66.0',
 			datapackVersion: '84.0',
