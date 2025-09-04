@@ -1,8 +1,8 @@
 <script lang="ts">
 	import {
-		mcVersions,
-		mcMajorVersions,
-		mcLegacyVersions,
+		versions as mcVersions,
+		majorVersions as mcMajorVersions,
+		legacyVersions as mcLegacyVersions,
 		type Bindings,
 		type ProjectBindings,
 	} from '@mc/metadata';

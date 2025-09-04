@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { mcVersions, mcMajorVersions, mcLegacyVersions } from '@mc/metadata';
+	import { versions as mcVersions, majorVersions as mcMajorVersions, legacyVersions as mcLegacyVersions } from '@mc/metadata';
 
 	import Switch from '~/components/switch.svelte';
 
