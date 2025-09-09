@@ -1,4 +1,4 @@
-import type { McVersion } from '@mc/metadata';
+import type { Version as McVersion } from '@mc/metadata';
 
 import type { Loose } from './loose';
 
@@ -20,6 +20,17 @@ export const versionsInfo = new Map<Loose<McVersion>, VersionInfo>([
 			page: 'thecopperage',
 			article: 'https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-9',
 			wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.9',
+		},
+	],
+	[
+		'25w37a',
+		{
+			page: '25w37a',
+			date: '2025-09-09',
+			article: 'https://www.minecraft.net/en-us/article/minecraft-snapshot-25w37a',
+			wiki: 'https://minecraft.wiki/w/Java_Edition_25w37a',
+			resourcepackVersion: '69.0',
+			datapackVersion: '87.0'
 		},
 	],
 	[
