@@ -75,7 +75,7 @@ export default defineConfig({
 						'gameplay',
 						{
 							label: 'Environments',
-							items: ['environment', 'client', 'server'],
+							items: ['environment', 'architecture'],
 						},
 						'launcher',
 						{
@@ -123,10 +123,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Shaders',
-							items: [
-								'shader',
-								'shaderloader'
-							]
+							items: ['shader', 'shaderloader'],
 						},
 						{
 							label: 'Plugins',

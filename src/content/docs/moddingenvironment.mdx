@@ -8,9 +8,12 @@ lastUpdated: 2025-05-10
 
 #### [Environment](/environment)
 
-[Minecraft](/minecraft) [Environment](/environment) infrastructure has to be considered when using modded worlds. 
-In singleplayer your modpack has to include server only and client&server mods too because the server is on your machine. [Minecraft](/minecraft) and your [Mod loader](/modloader) will handle which mods should go to the client or the server side parts of the infrastructure.
+[Minecraft](/minecraft) [Environment](/environment) [Architecture](/architecture) has to taken into consideration for modded content.
 
-In multiplayer you have to split your mods between client and server otherwise you are adding useless code with resulting bad performance and could also create problems. 
+In [Singleplayer](/singleplayer) your modpack has to include every mod, even the ones defined for server use.
+The [Mod loader](/modloader) will handle which mods should access the [client.jar](/client) or the [server.jar](/server) parts of the architecture.
 
-client&server [Project types](/projecttype) has to be included on both ends.
+In multiplayer it's good practice to split your mods between client side and server side to reduce the bundle of your modpack with better performance. 
+Projects that need to access both the [client.jar](/client) and the [server.jar](/server) parts of the architecture have be included in both bundles.
+
+![](~/assets/moddingenvironment.svg)

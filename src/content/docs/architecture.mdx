@@ -1,0 +1,64 @@
+---
+title: Architecture
+aliases:
+  - Architecture
+lastUpdated: 2025-09-11
+sidebar:
+  badge:
+    variant: caution
+    text: New
+---
+
+[Minecraft](/minecraft) compiled codebase consists of two files: the [client.jar](/client) and the [server.jar](/server).
+
+The [server.jar](/server) includes all the core functionalities of the game.
+
+The [client.jar](/client) has the [server.jar](/server) embedded in it.
+The [client.jar](/client) also has the code to run client only features, like the main menu, the pause menu and the player's input.
+This file is meant to be run on your computer with a [Launcher](/launcher).
+
+![](~/assets/architecture.svg)
+
+Both files are necessary to play [Minecraft](/minecraft) but are used differently depending on the type of [Gameplay](/gameplay).
+
+This architecture allows [Minecraft](/minecraft) code to be the same for [Singleplayer](/singleplayer) and [Multiplayer](/multiplayer), and therefore smaller bundles sizes, and easier for Minecraft developers to maintain.
+
+:::note
+Before `12w18a` the code was architected differently, files were separted based on [Gameplay](/gameplay) and not by [Environment](/environment).
+It didn't make much sense since the [Singleplayer](/singleplayer) file had the same exact "copied" featured of the [Multiplayer](/multiplayer) file.
+:::
+
+## [Multiplayer](/multiplayer)
+
+![](~/assets/architecturemultiplayer.svg)
+
+Game logic is piloted by the [server.jar](/server) that sends states to the clients. Clients are just interfaces for players to interact with and send back actions to the server, to make interactions possible.
+
+That's why, with bad Internet connections, you and your friends could see different things, get teleported back to previous locations or blocks will not actually break because the state of these changes hasn't been updated on the server, and propagated to all the other clients yet.
+
+This client-server architecture prevents client to alter the code on server (preventing cheats), and making client more lightweight since only the pure client "part" of the [client.jar](/client) is used in the [Launcher](/launcher).
+
+## [Singleplayer](/singleplayer)
+
+When you enter a [Singleplayer](/singleplayer) world the [server.jar](/server) will be spawned on your computer.
+
+![](~/assets/architecturesingleplayer.svg)
+
+Despite using the same files, lags don't occur with singleplayer: on your machine client and server code communicate using actual wires in your computer making it likely impossible of bad persisted states on the server as updates are instant.
+
+### [LAN](https://en.wikipedia.org/wiki/Local_area_network) connections
+
+You can open your world to LAN connections and the [server.jar](/server) on your computer will behave the same way for [Multiplayer](/multiplayer) on a remote one.
+That's possible beacuse the file is literally the same you would run on a remote machine.
+
+Other players from the same network, can join to your world using the [Multiplayer](/multiplayer) menu inserting the LAN address as the server address.
+
+![](~/assets/architecturesingleplayerlan.svg)
+
+If players are not on your network, port forwarding is required so the server can communicate with clients over the Internet.
+
+![](~/assets/architecturesingleplayerinternet.svg)
+
+In the end the main difference between [Singleplayer](/singleplayer) and [Multiplayer](/multiplayer) game architecture is where the [server.jar](/server) file is running.
+
+#### [Modding environment](/moddingenvironment)
