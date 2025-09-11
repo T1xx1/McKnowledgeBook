@@ -72,6 +72,7 @@ export default defineConfig({
 						'minecraft',
 						'vanilla',
 						'edition',
+						'gameplay',
 						{
 							label: 'Environments',
 							items: ['environment', 'client', 'server'],
