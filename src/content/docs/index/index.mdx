@@ -11,6 +11,10 @@ hero:
       - text: Start reading
         link: /minecraft
         icon: right-arrow
+      - text: News
+        link: /news
+        variant: secondary
+        icon: right-arrow
 editUrl: false
 ---
 
@@ -19,17 +23,13 @@ import { CardGrid, LinkCard } from "@astrojs/starlight/components";
 import Footer from './footer.astro';
 import Banner from './banner.astro';
 
-<Banner />
-
-<LinkCard title="News" href="/news" class="tip" />
-
 <CardGrid>
    <LinkCard title="Minecraft" href="/minecraft" />
    <LinkCard title="Modding" href="/modding" />
 </CardGrid>
 
-<br />
-<br />
+<Banner />
+
 <br />
 <br />
 <br />

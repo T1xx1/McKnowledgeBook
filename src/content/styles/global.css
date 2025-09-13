@@ -1,22 +1,12 @@
 /* linkcard arrow animation */
-.sl-link-card:hover>svg {
+.sl-link-card:hover > svg {
 	@apply transition-all translate-x-1;
 }
 
-/* landing primary button animation */
-.hero a.sl-link-button.primary {
-	@apply font-semibold;
-
-	&:hover svg {
-		@apply transition-all translate-x-1;
-	}
-}
-
 header {
-
 	/* site title animation */
 	a.site-title {
-		@apply gap-2.5 transition-all hover:translate-y-[-3px];
+		@apply gap-2.5 transition-all hover:-translate-y-1;
 	}
 }
 
@@ -33,14 +23,13 @@ header {
 		}
 
 		footer {
-
 			/* pagination link animations */
 			.pagination-links {
-				>[rel="prev"]:hover>svg {
+				> [rel='prev']:hover > svg {
 					@apply transition-all -translate-x-1;
 				}
 
-				>[rel="next"]:hover>svg {
+				> [rel='next']:hover > svg {
 					@apply transition-all translate-x-1;
 				}
 			}
@@ -49,5 +38,29 @@ header {
 }
 
 aside.right-sidebar-container {
-	@apply w-[400px]
+	@apply w-[400px];
+}
+
+/*  */
+
+.hero {
+	.actions {
+		@apply gap-5;
+
+		a.sl-link-button {
+			@apply font-semibold;
+
+			&:hover svg {
+				@apply transition-all translate-x-1;
+			}
+
+			&.secondary {
+				@apply bg-(--sl-badge-tip-bg) border-(--sl-badge-tip-border) text-(--sl-color-text-badge);
+
+				&:hover {
+					@apply bg-(--sl-badge-tip-bg)/80 border-(--sl-badge-tip-border)/80;
+				}
+			}
+		}
+	}
 }

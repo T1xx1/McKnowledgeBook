@@ -6,6 +6,8 @@
 
 /*  */
 
+@import './windstyle.css';
+
 @import './theme.css';
 
 @import '../content/styles/index.css';

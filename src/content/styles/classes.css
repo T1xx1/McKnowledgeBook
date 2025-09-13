@@ -1,8 +1,0 @@
-/* linkcard tip variant */
-.sl-link-card:has(.tip) {
-	@apply bg-(--sl-badge-tip-bg) border-(--sl-badge-tip-border) text-(--sl-color-text-badge);
-
-	&:hover {
-		@apply bg-(--sl-badge-tip-bg)/80 border-(--sl-badge-tip-border)/80;
-	}
-}
