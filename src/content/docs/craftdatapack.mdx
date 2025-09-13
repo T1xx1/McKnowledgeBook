@@ -59,9 +59,12 @@ import Yb from '~/components/yb.astro';
     Starting from [`25w21a`](/25w21a), datapacks can be easily created with the right [Datapack version](/datapack#datapack-versions), in game, with the `/datapack create <id> <name>` [Command](/command).
     :::
 
-    New [Minecraft](/minecraft) [Versions](/versions) may introduce new features to datapacks by bumping the [Datapack version](/datapack#datapack-versions). Starting from `1.20.2`, if your datapack uses functionalities that haven't been changed in the version bump, it's possible to set the `supported_formats` field to make your datapack compatible with new [Minecraft](/minecraft) [Versions](/versions) without changing the code nor the `pack_format` field.
+    New [Minecraft](/minecraft) [Versions](/versions) may introduce new features to datapacks by bumping the [Datapack version](/datapack#datapack-versions).
+	
+	Starting from `1.20.2`, if your datapack uses functionalities that haven't been changed in the version bump, it's possible to set the `supported_formats` field to make your datapack compatible with new [Minecraft](/minecraft) [Versions](/versions) without changing the code nor the `pack_format` field.
     Set the first number of the `supported_formats` field to the lowest [Datapack version](/datapack#datapack-versions) you support, and the second number to the highest [Datapack version](/datapack#datapack-versions) you support.
-    If your datapack uses functionalities that have been affected by the version bump, you have to bump you `pack_format` field and also update the code according to the chages made.
+
+    If your datapack uses functionalities that may have been affected by the version bump, you have to bump you `pack_format` field and also update the code according to the chages made.
 
     :::note
     I personally recommend to set the lowest supported version to the same version of `pack_format` and not use older versions than the "base" version your developing you datapack for.
@@ -75,23 +78,23 @@ import Yb from '~/components/yb.astro';
 
 	This folder will contain all the code of your datapack organized in namespaces
 	
-	For example if you want to change some [Minecraft](/minecraft) feature create a `minecraft` folder namespace and the code in this folder will overwrite the corrisponding file inside of [Minecraft](/minecraft) [Vanilla](/vanilla).
+	For example, if you want to change some [Minecraft](/minecraft) features, create a `minecraft` folder, and the code in this folder will overwrite the corrisponding file inside of [Minecraft](/minecraft) [Vanilla](/vanilla).
 	
 	:::note
-	You can inspect [Minecraft](/minecraft) [Vanilla](/vanilla) files here [Mc Assets](https://mcasset.cloud)
+	You can easily inspect [Minecraft](/minecraft) [Vanilla](/vanilla) files here [Mc Assets](https://mcasset.cloud)
 	:::
 
-	If you want to add new feature create a new folder namespace and the files in this folder will be added to the base game.
+	If you want to add new features, create a new folder, and the files in this folder will be added to the base game.
 
 	:::note
-	If your playing with a [Modpack](/modpack) be sure that the namespace your choosing it's not used anywhere else otherwise you are still going to be overwriting other [Mods](/mod) or [Datapacks](/datapack) functionalities.
+	If your playing with a [Modpack](/modpack) be sure that the namespace your choosing it's not used anywhere else, otherwise you are still going to be overwriting other [Mods](/mod) or [Datapacks](/datapack) functionalities.
 	:::
 
 	:::note
-	Namespaces can also be used to orginaze your code with datapacks with a lot of features.
+	Namespaces can also be used to organize your code if your datapack has a lot of features.
 	:::
 
-	So far your datapack should look something like this
+	So far your datapack should look something like this:
 
 	<FileTree>
 	- \<datapack\>
@@ -106,15 +109,13 @@ import Yb from '~/components/yb.astro';
 				- ...
 	</FileTree>
 
-4. Add features to your datapack
+4. Add features to your datapack ([view all](/datapacksyntax))
 
 	- [Advancements](/datapackadvancement)
 	- [Dialog](/datapackdialog)
 	- [Dimensions](/datapackdimension)
 	- [Enchantments](/datapackenchantment)
-	- [Functions](/datapackfunction)
 	- [Loot tables (Drops)](/datapackloottable)
-	- [Predicates](/datapackpredicate)
 	- [Recipes](/datapackrecipe)
 	- [Structures](/datapackstructure)
 	- [Tags](/datapacktag)
@@ -138,8 +139,10 @@ Here's some code examples of datapacks I've made:
 ## Generators
 
 Since [Datapacks](/datapack) are static files, they can also be generated with online tools like [Crafting](https://crafting.thedestruc7i0n.ca) or [Misode](https://misode.github.io).
+
+Keep in mind that sometimes these generators won't have the latest version right away or a niche snapshot, since the datapack syntax can change a lot with new [Versions](/versions).
+
 When aiming for a more complex datapack, maybe a hybrid or complete manual approach is better.
-Keep in mind that sometimes these generators won't have the latest version right away or a niche snapshot since the datapack syntax can change a lot with new [Versions](/versions).
 
 ---
 
