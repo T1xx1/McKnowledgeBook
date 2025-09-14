@@ -89,6 +89,7 @@ export default defineConfig({
 							items: ['datapack', 'datapackvsmod', 'craftdatapack', 'datapacksyntax'],
 						},
 						'vibrantvisuals',
+						'identifier',
 						'tools',
 						'minecraftwiki',
 						'misc',

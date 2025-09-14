@@ -1,0 +1,47 @@
+---
+title: Identifier
+aliases:
+  - Identifier
+  - Identifiers
+  - Namespace id
+  - Namespace ids
+  - Namespaced string
+  - Namespaced strings
+  - Resource id
+  - Resource ids
+  - Resource location
+  - Resource locations
+lastUpdated: 2025-09-14
+sidebar:
+  badge:
+    variant: caution
+    text: New
+---
+
+import Wiki from '~/components/wiki.astro';
+
+Identifiers are a way to declare and identify elements in [Minecraft](/minecraft) like items, block or entities.
+
+Identifier can be made with lowercase letters (abc...), numbers (123...), underscore (_), hyphen (-) and dot (.).
+
+Identifiers have this structure `namespace:name`, where the `namespace` is the name of the folder from the [Datapack](/datapack) or [Mod](/mod) where the item is located, and the `name` is the name of the `.json` file where the resource is declared.
+
+For exmaple, if I want to obtain a glass block using [Commands](/command) I would type this:
+```mcfunction
+/give @s minecraft:glass
+```
+`minecraft:glass` is the identifier of the glass block and `minecraft` is, of course, the namespace of [Vanilla](/vanilla) items.
+
+:::note
+The `minecraft` namespace can be omitted, but it's good practice to be very specific when working with [Datapacks](/datapack) or [Mods](/mod), and thefore multiple namespaces.
+:::
+
+---
+
+#### Resources
+
+- <Wiki src="https://minecraft.wiki/w/Resource_location" />
+
+#### Related
+
+- [Target selector](/targetselector)
