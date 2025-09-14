@@ -7,9 +7,9 @@
 	"packageManager": "pnpm@10.13.1",
 	"scripts": {
 		"dev": "astro dev",
-		"build": "pnpm run metadata:build && astro build",
+		"build": "astro build",
 		"metadata:build": "cd modules/metadata && pnpm build",
-		"predeploy": "pnpm run build"
+		"predeploy": "pnpm run metadata:build && pnpm run build"
 	},
 	"dependencies": {
 		"sharp": "^0.34.3"
