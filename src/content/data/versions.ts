@@ -25,7 +25,7 @@ export const versionsInfo = new Map<Loose<McVersion>, VersionInfo>([
 	[
 		'1.21.9-pre1',
 		{
-			page: '1.21.9-pre1',
+			page: '1-21-9-pre1',
 			article: 'https://www.minecraft.net/en-us/article/minecraft-1-21-9-pre-release-1',
 			wiki: 'https://minecraft.wiki/w/Java_Edition_1.21.9_Pre-Release_1',
 			resourcepackVersion: '69.0',
