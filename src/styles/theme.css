@@ -25,7 +25,3 @@
 
 	--font-sans: var(--font-primary);
 }
-
-@utility pixelated {
-	image-rendering: pixelated;
-}

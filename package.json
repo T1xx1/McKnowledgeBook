@@ -1,10 +1,7 @@
 {
 	"name": "mcknowledgebook",
 	"type": "module",
-	"engines": {
-		"node": ">=22"
-	},
-	"packageManager": "pnpm@10.13.1",
+	"packageManager": "pnpm@10.16.1",
 	"scripts": {
 		"dev": "astro dev",
 		"build": "pnpm run metadata:build && astro build",

@@ -30,7 +30,7 @@ const { title, aliases, icon, sidebar } = Astro.locals.starlightRoute.entry.data
 
 	{
 		aliases && (
-			<div class="flex gap-1.5">
+			<div class="flex flex-wrap gap-1.5">
 				{aliases.map(
 					(alias) =>
 						alias !== title &&

@@ -3,16 +3,79 @@ title: Datapack tag
 aliases:
   - Datapack tag
   - Datapack tags
-lastUpdated: 2025-08-27
+  - Datapack registry tag
+  - Datapack registry tags
+lastUpdated: 2025-09-13
+sidebar:
+  badge:
+    variant: caution
+    text: New
 ---
 
-import NoContent from '~/components/nocontent.astro';
+import { FileTree, Steps } from '@astrojs/starlight/components';
+
 import Wiki from '~/components/wiki.astro';
 
-<NoContent />
+Tags let you define custom element groups for other functionalities like [Advancements](/datapackadvancement) or [Recipes](/datapackrecipe).
+
+<Steps>
+
+1. Create a folder named `tags` in your [Datapack](/datapack) namespace
+
+    <FileTree>
+	- \<datapack\>
+		- pack.mcmeta
+		- pack.png
+		- data
+			- minecraft
+				- ...
+			- \<namespace\>
+				- tags
+					- ...
+	</FileTree>
+
+2. Tags can affect completely different areas of [Minecraft](/minecraft), so to keep things organized and isolated, you'll need to create a subfolder for the context you want your tag to be aviable in
+
+	| Folder                        | Context                              |
+	| ----------------------------- | ------------------------------------ |
+	| `banner_pattern`              | Banner patterns                      |
+	| `biome`                       | Biome specific spawnable structures  |
+	| `block`                       | Advancements and world generation    |
+	| `damage_type`                 | Damage types                         |
+	| `dialog`                      | Dialogs                              |
+	| `enchantment`                 | Enchantment book drops               |
+	| `entity_type`                 | [Target selectors](/targetselector)  |
+	| `flat_level_generator_preset` | Flat level generator presets         |
+	| `fluid`                       | Fluids                               |
+	| `function`                    | Functions                            |
+	| `game_event`                  | Game events                          |
+	| `instrument`                  | Instrument                           | 
+	| `item`                        | Recipes and filtering                |
+	| `painting_variant`            | Painting variants                    |
+	| `point_of_interest`           | Point of interests                   |
+	| `structure`                   | Structures                           |
+	| `world_presets`               | World presents                       |
+
+3. Create a `<tag>.json` file for your tag and list the element [Identifiers](/identifier)
+
+	```json
+	// oak.json
+	{
+		"values": [
+			// element identifiers
+			"minecraft:oak_log",
+			"minecraft:oak_planks",
+		]
+	}
+	```
+
+4. Done
+
+</Steps>
 
 ---
 
 #### Resources
 
+- <Wiki src="https://minecraft.wiki/w/Tag_(Java_Edition)" />
 - <Wiki src="https://minecraft.wiki/w/Data_pack" name="Data pack" />
