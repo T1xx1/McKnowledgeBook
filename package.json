@@ -3,7 +3,7 @@
 	"type": "module",
 	"packageManager": "pnpm@10.16.1",
 	"scripts": {
-		"dev": "astro dev",
+		"dev": "pnpm run metadata:build && astro dev",
 		"build": "pnpm run metadata:build && astro build",
 		"metadata:build": "cd modules/metadata && pnpm build",
 		"predeploy": "pnpm run build"
