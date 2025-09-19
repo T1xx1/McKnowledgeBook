@@ -1,0 +1,10 @@
+---
+type Props = {
+	src: string;
+	class?: string;
+};
+
+const { src, class: className = '' } = Astro.props;
+---
+
+<img src={src} alt="" class={`size-8 rounded-none ${className}`} />
