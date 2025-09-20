@@ -77,6 +77,7 @@ export default defineConfig({
 						'versions',
 						'launcher',
 						/*  */
+						'seed',
 						'worldgeneration',
 						/* technical */
 						'identifier',
