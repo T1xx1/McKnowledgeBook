@@ -76,15 +76,20 @@ export default defineConfig({
 						'environment',
 						'versions',
 						'launcher',
-						'resourcepack',
-						'datapack',
+						/*  */
 						'worldgeneration',
-						'vibrantvisuals',
-						'lighting',
+						/* technical */
 						'identifier',
 						'command',
+						'lighting',
+						/* exts */
+						'resourcepack',
+						'datapack',
+						'vibrantvisuals',
+						/* tools */
 						'tools',
 						'minecraftwiki',
+						/*  */
 						'misc',
 					],
 				},
@@ -94,6 +99,7 @@ export default defineConfig({
 						'modding',
 						'minecraftsobfuscatedcodebase',
 						'moddingenvironment',
+						/*  */
 						'projecttype',
 						'loader',
 						'modpack',
@@ -102,9 +108,11 @@ export default defineConfig({
 						'plugin',
 						'serverengine',
 						'proxyserver',
+						/* tools */
 						'moddingtools',
 						'modrinth',
 						'modpackker',
+						/*  */
 						'moddingmisc',
 					],
 				},
