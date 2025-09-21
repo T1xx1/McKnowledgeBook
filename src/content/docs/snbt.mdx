@@ -1,0 +1,38 @@
+---
+title: SNBT
+aliases:
+  - SNBT
+  - SNBTs
+  - Stringified NBT
+  - Stringified NBTs
+  - Stringified named binary tag
+  - Stringified named binary tags
+lastUpdated: 2025-09-21
+sidebar:
+  badge:
+    variant: caution
+    text: New
+---
+
+import Wiki from '~/components/wiki.astro';
+
+The stringified named binary tag is the text based, human readable version of [NBT](/nbt).
+
+SNBT is used a lot in [Commands](/commands) to specify items attributes.
+
+Give a diamond sword with the sharpness 5 enchantment.
+```mcfunction
+/give @s minecraft:diamond_sword{Enchantments:[{id:"minecraft:sharpness",lvl:5s}]}
+```
+
+Specifications in the curly brackets is SNBT.
+
+---
+
+#### Resources
+
+- <Wiki src="https://minecraft.wiki/w/NBT_format#SNBT_format" />
+
+#### Related
+
+- [NBT](/nbt)

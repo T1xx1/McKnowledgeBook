@@ -76,12 +76,13 @@ export default defineConfig({
 						'environment',
 						'versions',
 						'launcher',
-						/*  */
-						'seed',
-						'worldgeneration',
 						/* technical */
 						'identifier',
 						'command',
+						'seed',
+						'worldgeneration',
+						'nbt',
+						'structure',
 						'lighting',
 						/* exts */
 						'resourcepack',
@@ -109,6 +110,8 @@ export default defineConfig({
 						'plugin',
 						'serverengine',
 						'proxyserver',
+						/* tech */
+						'schematic',
 						/* tools */
 						'moddingtools',
 						'modrinth',
