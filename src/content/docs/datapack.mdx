@@ -5,7 +5,7 @@ aliases:
   - Datapacks
   - Data pack
   - Data packs
-lastUpdated: 2025-08-27
+lastUpdated: 2025-09-21
 ---
 
 import { versionsInfo } from '~/data/versions';
@@ -20,14 +20,19 @@ It's a folder or a `zip` containing static files like `json`s and `png`s files w
 
 #### Datapack versions
 
-<Bindings client:load data={Object.fromEntries([...versionsInfo].map(([version, info]) => [version, info.datapackVersion]))} />
+<Bindings
+	client:load
+	data={Object.fromEntries(
+		[...versionsInfo].map(([version, info]) => [version, info.datapackVersion])
+	)}
+/>
 
-#### Datapack store location
+#### Location
 
-| [Launcher](/launcher)                    | Location                                                                                                                                                                                          |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Minecraft launcher](/minecraftlauncher) | Windows `%AppData%/Roaming/.minecraft/saves/<world>/datapacks` <br /> macOS `~/Library/Application Support/minecraft/saves/<world>/datapacks` <br /> Linux `~/.minecraft/saves/<world>/datapacks` |
-| [ModrinthApp](/modrinthapp)              | Windows `%AppData%/Roaming/ModrinthApp/profiles/<profile>/saves/<world>/datapacks` <br /> macOS ? <br /> Linux ?                                                                                                                        |
+| [Launcher](/launcher)                    | Location                                                 |
+| ---------------------------------------- | -------------------------------------------------------- |
+| [Minecraft launcher](/minecraftlauncher) | `.minecraft/saves/<world>/datapacks`                     |
+| [ModrinthApp](/modrinthapp)              | `ModrinthApp/profiles/<profile>/saves/<world>/datapacks` |
 
 #### [Datapacks VS mods](/datapackvsmod)
 #### [Craft a datapack](/craftdatapack)
