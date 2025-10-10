@@ -10,14 +10,14 @@ Project types are all the addons that add, modify or extends [Minecraft](/minecr
 
 To understand each type is necessary to understand which part of the game they affect, where they run and the required software they need to use.
 
-| Project type                   | [Modding environment](/moddingenvironment)                        | [Version](/versions)              | [Mod loader](/modloader)/[Plugin loader](/pluginloader) | [Shader loader](/shaderloader) |
-| ------------------------------ | ----------------------------------------------------------------- | --------------------------------- | ------------------------------------------------------- | ------------------------------ |
-| [Resource pack](/resourcepack) | [Client](/client) ([Server](/resourcepack#server-resource-packs)) | [Optional](/resourcepack#version) | //                                                      | `Vanilla`                      |
-| [Datapack](/datapack)          | [Client](/client) or/and [Server](/server)                        | Required                          | `Vanilla`                                               | //                             |
-| [Shader](/shader)              | [Client](/client)                                                 | Required                          | //                                                      | Required                       |
-| [Plugin](/plugin)              | [Server](/server)                                                 | Required                          | Required                                                | //                             |
-| [Mod](/mod)                    | [Client](/client) or/and [Server](/server)                        | Required                          | Required                                                | //                             |
-| [Modpack](/modpack)            | [Client](/client) or/and [Server](/server)                        | Required                          | Optional                                                | Optional                       |
+| Project type                   | [Gameplay](/gameplay)                                     | [Modding environment](/moddingenvironment)                        | [Version](/versions)              | [Loader](/loader)                                                    |
+| ------------------------------ | --------------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------- | -------------------------------------------------------------------- |
+| [Resource pack](/resourcepack) | [Singleplayer](/singleplayer)                             | [Client](/client) ([Server](/resourcepack#server-resource-packs)) | [Optional](/resourcepack#version) | [Vanilla](/vanilla)                                                  |
+| [Datapack](/datapack)          | [Singleplayer](/singleplayer)/[Multiplayer](/multiplayer) | [Client](/client) or [Server](/server)                            | Required                          | [Vanilla](/vanilla)                                                  |
+| [Shader](/shader)              | [Singleplayer](/singleplayer)                             | [Client](/client)                                                 | Required                          | [Shader loader](/shaderloader)                                       |
+| [Plugin](/plugin)              | [Singleplayer](/singleplayer)/[Multiplayer](/multiplayer) | [Server](/server)                                                 | Required                          | [Mod loader](/modloader)                                             |
+| [Mod](/mod)                    | [Singleplayer](/singleplayer)/[Multiplayer](/multiplayer) | [Client](/client) or/and [Server](/server)                        | Required                          | [Mod loader](/modloader)                                             |
+| [Modpack](/modpack)            | [Singleplayer](/singleplayer)/[Multiplayer](/multiplayer) | [Client](/client) or/and [Server](/server)                        | Required                          | Optional [Mod loader](/modloader) and [Shader loader](/shaderloader) |
 
 :::tip[News]
 [Shaders](/shader) could become a vanilla type. [Read more](/vibrantvisuals)
