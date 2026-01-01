@@ -3,10 +3,10 @@
 	"type": "module",
 	"packageManager": "pnpm@10.27.0",
 	"scripts": {
-		"dev": "pnpm run metadata:build && astro dev",
-		"build": "pnpm run metadata:build && astro build",
-		"metadata:build": "cd modules/metadata && pnpm build",
-		"predeploy": "pnpm run build"
+		"dev": "pnpm run modules:build && astro dev",
+		"build": "pnpm run modules:build && astro build",
+		"predeploy": "pnpm run build",
+		"modules:build": "turbo run build"
 	},
 	"dependencies": {
 		"sharp": "^0.34.5"
@@ -23,6 +23,7 @@
 		"svelte": "^5.46.1",
 		"tailwindcss": "^4.1.18",
 		"tsfix": "workspace:*",
+		"turbo": "^2.7.2",
 		"typescript": "^5.9.3"
 	}
 }
