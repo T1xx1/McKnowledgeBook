@@ -1,0 +1,11 @@
+---
+import Wiki from './wiki.astro';
+
+type Props = {
+	version: string;
+}
+
+const { version } = Astro.props;
+---
+
+<Wiki slug=`Java_Edition_${version}` name={version} />

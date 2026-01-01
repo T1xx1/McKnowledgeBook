@@ -1,24 +1,22 @@
 ---
 type Props = {
-	src: string;
-	name?: string;
+	slug: string;
+	name: string;
 };
 
-const { src, name } = Astro.props;
+const { slug, name } = Astro.props;
 ---
 
 <a
-	href={src}
+	href=`https://minecraft.wiki/w/${slug}`
 	target="_blank"
 	class="relative bottom-[-7px] mx-[1px] w-fit inline-flex gap-1.5 items-center text-pink-300 hover:brightness-150"
 >
 	<img
 		src="https://minecraft.wiki/images/Favicon.ico"
 		alt="Minecraft Wiki"
-		class="size-6"
+		class="size-5"
 	/>
 
-	{name && name + ' • '}
-
-	<span>Minecraft Wiki</span>
+	<span>{name}</span>
 </a>

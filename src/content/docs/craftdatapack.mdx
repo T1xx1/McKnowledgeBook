@@ -8,6 +8,7 @@ lastUpdated: 2025-08-27
 
 import { FileTree, Steps } from '@astrojs/starlight/components';
 
+import Version from '~/components/version.astro';
 import Wiki from '~/components/wiki.astro';
 import Yb from '~/components/yb.astro';
 
@@ -49,16 +50,16 @@ import Yb from '~/components/yb.astro';
 
     The `description` field can use [Formatting codes](/formattingcode).
 
-    The `pack_format` field is the version of the datapack format. This field is related to the [Minecraft](/minecraft) [Version](/versions) you want your datapack to be compatible with. Check out which [Datapack versions](/datapack#datapack-versions) you should set.
+    The `pack_format` field is the version of the datapack format. This field is related to the [Minecraft](/minecraft) [Version](/versions) you want your datapack to be compatible with.
 
     :::note
-    Starting from [`25w21a`](/25w21a), datapacks can be easily created with the right [Datapack version](/datapack#datapack-versions), in game, with the `/datapack create <id> <name>` [Command](/command).
+    Starting from <Version version="25w21a" />, datapacks can be easily created with the right datapack version, in game, with the `/datapack create <id> <name>` [Command](/command).
     :::
 
-    New [Minecraft](/minecraft) [Versions](/versions) may introduce new features to datapacks by bumping the [Datapack version](/datapack#datapack-versions).
+    New [Minecraft](/minecraft) [Versions](/versions) may introduce new features to datapacks by bumping the datapack version.
 	
 	Starting from `1.20.2`, if your datapack uses functionalities that haven't been changed in the version bump, it's possible to set the `supported_formats` field to make your datapack compatible with new [Minecraft](/minecraft) [Versions](/versions) without changing the code nor the `pack_format` field.
-    Set the first number of the `supported_formats` field to the lowest [Datapack version](/datapack#datapack-versions) you support, and the second number to the highest [Datapack version](/datapack#datapack-versions) you support.
+    Set the first number of the `supported_formats` field to the lowest datapack version you support, and the second number to the highest datapack version you support.
 
     If your datapack uses functionalities that may have been affected by the version bump, you have to bump you `pack_format` field and also update the code according to the chages made.
 
@@ -144,7 +145,7 @@ When aiming for a more complex datapack, maybe a hybrid or complete manual appro
 
 #### Resources
 
-- <Wiki src="https://minecraft.wiki/w/Tutorial:Creating_a_data_pack" />
+- <Wiki slug="Tutorial:Creating_a_data_pack" name="Creating a data pack" />
 
 <Yb id="ac6V5-KT6Rg" />
 
