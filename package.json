@@ -22,6 +22,7 @@
 		"starlight-links-validator": "^0.17.2",
 		"svelte": "^5.46.1",
 		"tailwindcss": "^4.1.18",
+		"tsfix": "workspace:*",
 		"typescript": "^5.9.3"
 	}
 }

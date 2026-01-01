@@ -1,7 +1,5 @@
 import type { Version as McVersion } from '@mc/metadata';
 
-import type { Loose } from './loose';
-
 type VersionInfo = {
 	name?: string;
 	page?: string;

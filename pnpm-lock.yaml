@@ -42,6 +42,9 @@ importers:
       tailwindcss:
         specifier: ^4.1.18
         version: 4.1.18
+      tsfix:
+        specifier: workspace:*
+        version: link:modules/Tsfix
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
