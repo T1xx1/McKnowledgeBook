@@ -4,15 +4,15 @@ import { Image } from 'astro:assets';
 import book from '~/assets/book.webp';
 
 type Props = {
-	src: string;
+	slug: string;
 	name?: string;
 };
 
-const { src, name } = Astro.props;
+const { slug, name } = Astro.props;
 ---
 
 <a
-	href={src}
+	href=`https://minecraft.net/en-us/article/${slug}`
 	target="_blank"
 	class="relative bottom-[-7px] mx-[1px] w-fit inline-flex gap-1.5 items-center text-[#2A641C] hover:brightness-150"
 >
@@ -20,5 +20,5 @@ const { src, name } = Astro.props;
 
 	{name && name + ' • '}
 
-	Minecraft blog
+	<span>Minecraft blog</span>
 </a>
