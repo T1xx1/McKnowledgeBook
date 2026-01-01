@@ -1,0 +1,7 @@
+@theme {
+	--spacing-100: 25rem;
+}
+
+@utility pixelated {
+	image-rendering: pixelated;
+}

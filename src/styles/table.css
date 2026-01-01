@@ -1,11 +1,3 @@
-@theme {
-	--spacing-100: 25rem;
-}
-
-@utility pixelated {
-	image-rendering: pixelated;
-}
-
 .table {
 	tr {
 		@apply hover:bg-gray-200/40;
