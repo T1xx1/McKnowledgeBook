@@ -5,6 +5,7 @@
 	"scripts": {
 		"dev": "pnpm run modules:build && astro dev",
 		"build": "pnpm run modules:build && astro build",
+		"format": "prettier --write .",
 		"predeploy": "pnpm run build",
 		"modules:build": "turbo run build"
 	},
@@ -18,6 +19,7 @@
 		"@mc/metadata": "workspace:*",
 		"@tailwindcss/vite": "^4.1.18",
 		"astro": "^5.16.6",
+		"prettier": "^3.7.4",
 		"starlight-image-zoom": "^0.13.2",
 		"starlight-links-validator": "^0.17.2",
 		"svelte": "^5.46.1",
