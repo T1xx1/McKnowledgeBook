@@ -57,8 +57,8 @@ import Yb from '~/components/yb.astro';
     :::
 
     New [Minecraft](/minecraft) [Versions](/versions) may introduce new features to datapacks by bumping the datapack version.
-	
-	Starting from `1.20.2`, if your datapack uses functionalities that haven't been changed in the version bump, it's possible to set the `supported_formats` field to make your datapack compatible with new [Minecraft](/minecraft) [Versions](/versions) without changing the code nor the `pack_format` field.
+
+    Starting from `1.20.2`, if your datapack uses functionalities that haven't been changed in the version bump, it's possible to set the `supported_formats` field to make your datapack compatible with new [Minecraft](/minecraft) [Versions](/versions) without changing the code nor the `pack_format` field.
     Set the first number of the `supported_formats` field to the lowest datapack version you support, and the second number to the highest datapack version you support.
 
     If your datapack uses functionalities that may have been affected by the version bump, you have to bump you `pack_format` field and also update the code according to the chages made.
@@ -73,55 +73,46 @@ import Yb from '~/components/yb.astro';
 
 3.  Create a `data` folder
 
-	This folder will contain all the code of your datapack organized in namespaces
-	
-	For example, if you want to change some [Minecraft](/minecraft) features, create a `minecraft` folder, and the code in this folder will overwrite the corrisponding file inside of [Minecraft](/minecraft) [Vanilla](/vanilla).
-	
-	:::note
-	You can easily inspect [Minecraft](/minecraft) [Vanilla](/vanilla) files here [Mc Assets](https://mcasset.cloud)
-	:::
+    This folder will contain all the code of your datapack organized in namespaces
 
-	If you want to add new features, create a new folder, and the files in this folder will be added to the base game.
+    For example, if you want to change some [Minecraft](/minecraft) features, create a `minecraft` folder, and the code in this folder will overwrite the corrisponding file inside of [Minecraft](/minecraft) [Vanilla](/vanilla).
 
-	:::note
-	If your playing with a [Modpack](/modpack) be sure that the namespace your choosing it's not used anywhere else, otherwise you are still going to be overwriting other [Mods](/mod) or [Datapacks](/datapack) functionalities.
-	:::
+    :::note
+    You can easily inspect [Minecraft](/minecraft) [Vanilla](/vanilla) files here [Mc Assets](https://mcasset.cloud)
+    :::
 
-	:::note
-	Namespaces can also be used to organize your code if your datapack has a lot of features.
-	:::
+    If you want to add new features, create a new folder, and the files in this folder will be added to the base game.
 
-	So far your datapack should look something like this:
+    :::note
+    If your playing with a [Modpack](/modpack) be sure that the namespace your choosing it's not used anywhere else, otherwise you are still going to be overwriting other [Mods](/mod) or [Datapacks](/datapack) functionalities.
+    :::
 
-	<FileTree>
-	- \<datapack\>
-		- pack.mcmeta
-		- pack.png
-		- data
-			- minecraft
-				- ...
-			- \<namespace\>
-				- ...
-			- \<namespace2\>
-				- ...
-	</FileTree>
+    :::note
+    Namespaces can also be used to organize your code if your datapack has a lot of features.
+    :::
 
-4. Add features to your datapack ([view all](/datapacksyntax))
+    So far your datapack should look something like this:
 
-	- [Advancements](/datapackadvancement)
-	- [Dialog](/datapackdialog)
-	- [Dimensions](/datapackdimension)
-	- [Enchantments](/datapackenchantment)
-	- [Loot tables (Drops)](/datapackloottable)
-	- [Recipes](/datapackrecipe)
-	- [Structures](/datapackstructure)
-	- [Tags](/datapacktag)
-	- [World generation](/datapackworldgeneration)
+    <FileTree>
 
-5. Done
-	
-	:::note
-	[Datapacks](/datapack) folder can also be zipped to save space and reduce loading time.
+- \<datapack\> - pack.mcmeta - pack.png - data - minecraft - ... - \<namespace\> - ... - \<namespace2\> - ...
+  </FileTree>
+
+4.  Add features to your datapack ([view all](/datapacksyntax))
+    - [Advancements](/datapackadvancement)
+    - [Dialog](/datapackdialog)
+    - [Dimensions](/datapackdimension)
+    - [Enchantments](/datapackenchantment)
+    - [Loot tables (Drops)](/datapackloottable)
+    - [Recipes](/datapackrecipe)
+    - [Structures](/datapackstructure)
+    - [Tags](/datapacktag)
+    - [World generation](/datapackworldgeneration)
+
+5.  Done
+
+    :::note
+    [Datapacks](/datapack) folder can also be zipped to save space and reduce loading time.
 
 </Steps>
 

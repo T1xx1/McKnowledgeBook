@@ -19,43 +19,37 @@ Dialogs are still and experimental feature. To apply changes you would need to e
 
 <Steps>
 
-1. Create a folder named `dialog` in you [Datapack](/datapack) namespace
-   
-   <FileTree>
-	- \<datapack\>
-		- pack.mcmeta
-		- pack.png
-		- data
-			- minecraft
-				- ...
-			- \<namespace\>
-				- dialog
-					- ...
-	</FileTree>
-2. Create a `<dialog>.json` file for your dialog
+1.  Create a folder named `dialog` in you [Datapack](/datapack) namespace
 
-	```json
-	// hello_world.json
-	{
-		"type": "minecraft:notice", // The dialog type
-		"title": "Dialog", // The dialog title, shown at the top of the dialog
-		"body": [
-			// The dialog content, list of UI elements or only one element
-			{
-				"type": "plain_message",
-				"contents": "Hello world!"
-			}
-		]
-	}
-	```
+    <FileTree>
 
-	All the dialog syntax is aviable on the <Wiki slug="Dialog" name="Dialog" />.
+- \<datapack\> - pack.mcmeta - pack.png - data - minecraft - ... - \<namespace\> - dialog - ...
+  </FileTree>
 
-3. Display your dialog with `/dialog show @s <datapack>:<dialog>`.
+2.  Create a `<dialog>.json` file for your dialog
 
-	![](~/assets/basedialog.webp)
-</Steps>
+    ```json
+    // hello_world.json
+    {
+    	"type": "minecraft:notice", // The dialog type
+    	"title": "Dialog", // The dialog title, shown at the top of the dialog
+    	"body": [
+    		// The dialog content, list of UI elements or only one element
+    		{
+    			"type": "plain_message",
+    			"contents": "Hello world!"
+    		}
+    	]
+    }
+    ```
 
+    All the dialog syntax is aviable on the <Wiki slug="Dialog" name="Dialog" />.
+
+3.  Display your dialog with `/dialog show @s <datapack>:<dialog>`.
+
+        ![](~/assets/basedialog.webp)
+
+    </Steps>
 
 Here is a project showcasing the dialog system. [Dialog Teleport](https://modpackker.vercel.app/project/dialog-teleport).
 

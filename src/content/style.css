@@ -25,11 +25,11 @@ header {
 		footer {
 			/* pagination link animations */
 			.pagination-links {
-				> [rel="prev"]:hover > svg {
+				> [rel='prev']:hover > svg {
 					@apply transition-all -translate-x-1;
 				}
 
-				> [rel="next"]:hover > svg {
+				> [rel='next']:hover > svg {
 					@apply transition-all translate-x-1;
 				}
 			}

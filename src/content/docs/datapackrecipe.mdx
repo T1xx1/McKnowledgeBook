@@ -26,40 +26,33 @@ View [Vanilla](/vanilla) recipe here [Mc Assets • Recipes](https://mcasset.clo
 1. Create a folder named `recipe` in you [Datapack](/datapack) namespace
 
    <FileTree>
-	- \<datapack\>
-		- pack.mcmeta
-		- pack.png
-		- data
-			- minecraft
-				- ...
-			- \<namespace\>
-				- recipe
-					- ...
-	</FileTree>
+
+- \<datapack\> - pack.mcmeta - pack.png - data - minecraft - ... - \<namespace\> - recipe - ...
+  </FileTree>
 
 2. Create a `<recipe>.json` file for your recipe
 
-	:::note
-	The name of the `json` file will not affect the recipe but it's good pratice to name it after the item you want to craft.
-	Even [Minecraft](/minecraft) devs use this convention for [Vanilla](/vanilla).
-	:::
+   :::note
+   The name of the `json` file will not affect the recipe but it's good pratice to name it after the item you want to craft.
+   Even [Minecraft](/minecraft) devs use this convention for [Vanilla](/vanilla).
+   :::
 
 3. Choose how you want to craft your item
 
-	| Type                                                          | Name               | Description                                                                  |
-	| ------------------------------------------------------------- | ------------------ | ---------------------------------------------------------------------------- |
-	| [`minecraft:blasting`](#blasting)                             | Blasting           | Items cooked in a [Blast furnace](https://minecraft.wiki/w/Blast_Furnace)    |
-	| [`minecraft:campfire_cooking`](#campfire_cooking)             | Campfire cooking   | Items cooked on a [Campfire](https://minecraft.wiki/w/Campfire)              |
-	| [`minecraft:crafting_decorated_pot`](#crafting_decorated_pot) | Decorated pot      | [Decorated pot](https://minecraft.wiki/w/Decorated_Pot#Crafting) recipe      |
-	| [`minecraft:crafting_shaped`](#crafting_shaped)               | Crafting shaped    | Items and their placement                                                    |
-	| [`minecraft:crafting_shapeless`](#crafting_shapeless)         | Crafting shapeless | Only items recipe                                                            |
-	| [`minecraft:crafting_special_*`](#crafting_special_)          | Crafting special   | Special crafting methods                                                     |
-	| [`minecraft:crafting_transmute`](#crafting_transmute)         | Crafting transmute | Items trasmuted into other items                                             |
-	| [`minecraft:smelting`](#smelting)                             | Smelting           | Items cooked in a [Furnace](https://minecraft.wiki/w/Furnace)                |
-	| [`minecraft:smithing_transform`](#smithing_transform)         | Smithing           | Items crafted in a [Smithing table](https://minecraft.wiki/w/Smithing_table) |
-	| [`minecraft:smithing_trim`](#smithing_trim)                   | Smithing trim      | Items trimmed in a [Smithing table](https://minecraft.wiki/w/Smithing_table) |
-	| [`minecraft:smoking`](#smoking)                               | Smoking            | Items cooked in a [Smoker](https://minecraft.wiki/w/Smoker)                  |
-	| [`minecraft:stonecutting`](#stonecutting)                     | Stonecutting       | Items cut in a [Stonecutter](https://minecraft.wiki/w/Stonecutter)           |
+   | Type                                                          | Name               | Description                                                                  |
+   | ------------------------------------------------------------- | ------------------ | ---------------------------------------------------------------------------- |
+   | [`minecraft:blasting`](#blasting)                             | Blasting           | Items cooked in a [Blast furnace](https://minecraft.wiki/w/Blast_Furnace)    |
+   | [`minecraft:campfire_cooking`](#campfire_cooking)             | Campfire cooking   | Items cooked on a [Campfire](https://minecraft.wiki/w/Campfire)              |
+   | [`minecraft:crafting_decorated_pot`](#crafting_decorated_pot) | Decorated pot      | [Decorated pot](https://minecraft.wiki/w/Decorated_Pot#Crafting) recipe      |
+   | [`minecraft:crafting_shaped`](#crafting_shaped)               | Crafting shaped    | Items and their placement                                                    |
+   | [`minecraft:crafting_shapeless`](#crafting_shapeless)         | Crafting shapeless | Only items recipe                                                            |
+   | [`minecraft:crafting_special_*`](#crafting_special_)          | Crafting special   | Special crafting methods                                                     |
+   | [`minecraft:crafting_transmute`](#crafting_transmute)         | Crafting transmute | Items trasmuted into other items                                             |
+   | [`minecraft:smelting`](#smelting)                             | Smelting           | Items cooked in a [Furnace](https://minecraft.wiki/w/Furnace)                |
+   | [`minecraft:smithing_transform`](#smithing_transform)         | Smithing           | Items crafted in a [Smithing table](https://minecraft.wiki/w/Smithing_table) |
+   | [`minecraft:smithing_trim`](#smithing_trim)                   | Smithing trim      | Items trimmed in a [Smithing table](https://minecraft.wiki/w/Smithing_table) |
+   | [`minecraft:smoking`](#smoking)                               | Smoking            | Items cooked in a [Smoker](https://minecraft.wiki/w/Smoker)                  |
+   | [`minecraft:stonecutting`](#stonecutting)                     | Stonecutting       | Items cut in a [Stonecutter](https://minecraft.wiki/w/Stonecutter)           |
 
 4. Done
 
@@ -102,13 +95,15 @@ View [Vanilla](/vanilla) recipe here [Mc Assets • Recipes](https://mcasset.clo
 {
 	"type": "minecraft:crafting_shaped",
 	"category": "misc", // Optional. Defaults to `misc`. Category inside the recipe book
-	"key": { // Key-value pairs to easily describe items inside the `pattern` field
+	"key": {
+		// Key-value pairs to easily describe items inside the `pattern` field
 		"A": "minecraft:milk_bucket",
 		"B": "minecraft:sugar",
 		"C": "minecraft:wheat",
 		"E": "#minecraft:eggs"
 	},
-	"pattern": [ // Recipe pattern
+	"pattern": [
+		// Recipe pattern
 		"AAA",
 		"BEB",
 		"CCC"
@@ -135,10 +130,7 @@ An empty character can be used to create empty slots in the crafting table witho
 {
 	"type": "minecraft:crafting_shapeless",
 	"category": "equipment", // Optional. Defaults to `misc`. Category inside the recipe book
-	"ingredients": [
-		"minecraft:iron_ingot",
-		"minecraft:flint"
-	],
+	"ingredients": ["minecraft:iron_ingot", "minecraft:flint"],
 	"result": {
 		"count": 1, // Optional. Defaults to 1.
 		"id": "minecraft:flint_and_steel"
