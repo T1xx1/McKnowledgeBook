@@ -51,22 +51,6 @@ export default defineConfig({
 			],
 			sidebar: [
 				{
-					label: 'News',
-					items: [
-						'news',
-						{
-							slug: 'versions',
-							label: 'Versions • 21w42a',
-							badge: {
-								variant: 'tip',
-								text: 'New',
-							},
-						},
-						'chasetheskies',
-						'vibrantvisuals',
-					],
-				},
-				{
 					label: 'Minecraft',
 					items: [
 						'minecraft',
