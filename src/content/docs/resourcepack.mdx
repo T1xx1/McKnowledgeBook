@@ -8,8 +8,6 @@ aliases:
 lastUpdated: 2025-06-10
 ---
 
-import { versionsInfo } from '~/data/versions.ts';
-
 import Bindings from '~/components/bindings.svelte';
 import Wiki from "~/components/wiki.astro";
 
@@ -35,10 +33,6 @@ Despite being saved on the [Server](/server) these resource packs don't run on t
 
 Resource packs should only be tested for [Client](/client) side [Environment](/environment).
 :::
-
-## Resource pack versions
-
-<Bindings client:load data={Object.fromEntries([...versionsInfo].map(([version, info]) => [version, info.resourcepackVersion]))} />
 
 #### [Craft a resource pack](/craftresourcepack)
 
