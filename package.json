@@ -1,16 +1,13 @@
 {
 	"name": "mcknowledgebook",
 	"type": "module",
-	"packageManager": "pnpm@10.27.0",
+	"packageManager": "pnpm@10.28.1",
 	"scripts": {
 		"dev": "pnpm run modules:build && astro dev",
 		"build": "pnpm run modules:build && astro build",
 		"format": "prettier --write .",
 		"predeploy": "pnpm run build",
 		"modules:build": "turbo run build"
-	},
-	"dependencies": {
-		"sharp": "^0.34.5"
 	},
 	"devDependencies": {
 		"@astrojs/starlight": "^0.35.3",
@@ -20,6 +17,7 @@
 		"@tailwindcss/vite": "^4.1.18",
 		"astro": "^5.16.6",
 		"prettier": "^3.7.4",
+		"sharp": "^0.34.5",
 		"starlight-image-zoom": "^0.13.2",
 		"starlight-links-validator": "^0.17.2",
 		"svelte": "^5.46.1",
