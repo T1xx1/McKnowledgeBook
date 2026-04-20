@@ -120,30 +120,6 @@ export default defineConfig({
 			editLink: {
 				baseUrl: 'https://github.com/modpackker/mcknowledgebook/edit/main/',
 			},
-			head: [
-				{
-					tag: 'link',
-					attrs: {
-						rel: 'preconnect',
-						href: 'https://fonts.googleapis.com',
-					},
-				},
-				{
-					tag: 'link',
-					attrs: {
-						rel: 'preconnect',
-						href: 'https://fonts.gstatic.com',
-						crossorigin: true,
-					},
-				},
-				{
-					tag: 'link',
-					attrs: {
-						rel: 'stylesheet',
-						href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap',
-					},
-				},
-			],
 			customCss: ['./src/styles/index.css'],
 			components: {
 				PageTitle: './src/components/pagetitle.astro',
