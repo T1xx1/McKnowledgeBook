@@ -103,14 +103,6 @@ export default defineConfig({
 						'moddingmisc',
 					],
 				},
-				{
-					label: '📦 Modpackker',
-					link: 'https://modpackker.vercel.app',
-				},
-				{
-					label: '💚 T1xx1',
-					link: 'https://t1xx1.vercel.app',
-				},
 			],
 			editLink: {
 				baseUrl: 'https://github.com/modpackker/mcknowledgebook/edit/main/',
