@@ -5,41 +5,55 @@ import icon from '~/../assets/favicon.webp';
 import modpackker from '~/../assets/modpackker.webp';
 ---
 
-<footer class="flex flex-col sm:flex-row gap-10 items-start">
-	<div class="flex flex-col">
-		<div class="flex gap-3 items-center">
+<footer class="not-content flex flex-col gap-2 sm:flex-row sm:gap-8">
+	<!-- info -->
+	<div class="flex flex-col gap-3 items-center sm:items-start">
+		<div class="flex items-center gap-3">
 			<Image src={icon} alt="Icon" class="size-10" />
-
-			<div class="mt-0 text-lg font-medium">McKnowledgeBook</div>
+			<div class="text-lg font-medium">McKnowledgeBook</div>
 		</div>
 
 		<div>
-			Built with 💚 by <a href="https://t1xx1.vercel.app">T1xx1</a>
+			<span>Built with 💚 by </span>
+			<a href="https://t1xx1.vercel.app" class="text-[#00ff00]">T1xx1</a>
 		</div>
 	</div>
 
-	<div class="mt-0">
-		<div class="font-medium">Project</div>
+	<div class="flex flex-col gap-5 sm:flex-row">
+		<div class="space-y-1">
+			<div class="font-semibold text-center sm:text-left">Sites</div>
 
-		<ul class="mt-0 pl-5">
-			<li>
-				<a href="/why">Why this wiki?</a>
-			</li>
+			<div class="pl-1 flex flex-col gap-1 items-center sm:items-start">
+				<div class="pr-3 flex items-center gap-2">
+					<Image src={modpackker} alt="Modpackker" class="size-6 rounded-none!" />
+					<a href="https://modpackker.vercel.app" class="text-primary">
+						<span>Modpackker</span>
+					</a>
+				</div>
 
-			<li>
-				<a href="/tech">Tech</a>
-			</li>
+				<div class="pr-3 flex items-center gap-2.5">
+					<span>❓</span>
+					<a
+						href="https://modpackker.notion.site/Modpackker-manual-3241e57125a580ce8581fb82ebbad149"
+						class="text-primary"
+					>
+						Manual
+					</a>
+				</div>
+			</div>
+		</div>
 
-			<li>
+		<div>
+			<div class="font-semibold text-center sm:text-left">Project</div>
+
+			<div class="flex flex-col items-center sm:items-start">
 				<a
-					href="https://modpackker.vercel.app"
-					class="relative bottom-[-7px] inline-flex gap-1.5 items-center"
+					href="https://t1xx1.notion.site/333b9d9763528099a861def86036438f?v=333b9d976352801bb3f6000cb2bdedd5"
+					class="text-primary"
 				>
-					<Image src={modpackker} alt="Modpackker" class="size-6 !rounded-none" />
-
-					Modpackker
+					Issue tracker
 				</a>
-			</li>
-		</ul>
+			</div>
+		</div>
 	</div>
 </footer>
