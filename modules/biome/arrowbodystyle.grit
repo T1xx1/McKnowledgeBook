@@ -1,0 +1,7 @@
+engine biome(1.0)
+language js(jsx, typescript)
+
+JsArrowFunctionExpression(body=$body) where {
+	not $body <: JsFunctionBody(),
+	register_diagnostic(span=$body, severity="info", message="Explicit return statements are preferred over implicit return statements")
+}

@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "pnpm run modules:build && astro dev",
 		"build": "pnpm run modules:build && astro build",
-		"format": "prettier --write .",
+		"format": "biome format --write",
 		"predeploy": "pnpm run build",
 		"modules:build": "turbo run build"
 	},
@@ -13,10 +13,10 @@
 		"@astrojs/starlight": "^0.35.3",
 		"@astrojs/starlight-tailwind": "^4.0.2",
 		"@astrojs/svelte": "^7.2.4",
+		"@biomejs/biome": "^2.4.12",
 		"@mc/metadata": "workspace:*",
 		"@tailwindcss/vite": "^4.1.18",
 		"astro": "^5.16.6",
-		"prettier": "^3.8.0",
 		"sharp": "^0.34.5",
 		"starlight-image-zoom": "^0.13.2",
 		"starlight-links-validator": "^0.17.2",
