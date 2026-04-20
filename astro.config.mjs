@@ -15,7 +15,6 @@ export default defineConfig({
 	integrations: [
 		svelte(),
 		starlight({
-			plugins: [starlightImageZoom(), starlightLinksValidator()],
 			title: 'McKnowledgeBook',
 			favicon: '/favicon.ico',
 			logo: {
@@ -120,6 +119,7 @@ export default defineConfig({
 			components: {
 				PageTitle: './src/components/pagetitle.astro',
 			},
+			plugins: [starlightImageZoom(), starlightLinksValidator()],
 		}),
 	],
 });
