@@ -11,6 +11,7 @@ export const collections = {
 				return z.object({
 					aliases: z.array(z.string()).optional(),
 					icon: z.union([image().optional(), z.string()]),
+					lastUpdated: z.date(),
 				});
 			},
 		}),
