@@ -1,7 +1,7 @@
-@theme {
-	--spacing-100: 25rem;
+@utility corner-squircle {
+	corner-shape: squircle;
 }
 
-@utility pixelated {
+@utility image-pixelated {
 	image-rendering: pixelated;
 }
