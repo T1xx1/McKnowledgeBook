@@ -1,8 +1,8 @@
 <script lang="ts">
 	import {
-		versions as mcVersions,
-		majorVersions as mcMajorVersions,
-		legacyVersions as mcLegacyVersions,
+		mcVersions,
+		mcMajorVersions,
+		mcLegacyVersions,
 		type Bindings,
 		type ProjectBindings,
 	} from '@mc/metadata';
@@ -10,18 +10,17 @@
 	import Button from '~/components/button.svelte';
 	import Switch from '~/components/switch.svelte';
 
+	/* prettier-ignore */
 	let {
 		type = 'loader',
 		data,
-	}:
-		| {
-				type: 'loader';
-				data: Bindings;
-		  }
-		| {
-				type: 'project';
-				data: ProjectBindings;
-		  } = $props();
+	}: {
+		type: 'loader';
+		data: Bindings;
+	} | {
+		type: 'project';
+		data: ProjectBindings;
+  	} = $props();
 
 	let showSnapshots = $state(false);
 	let showAll = $state(false);
