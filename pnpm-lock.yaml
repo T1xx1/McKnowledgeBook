@@ -38,6 +38,9 @@ importers:
       starlight-links-validator:
         specifier: ^0.23.0
         version: 0.23.0(@astrojs/starlight@0.38.3(astro@6.1.8(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@6.0.3)(yaml@2.8.3)))(astro@6.1.8(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@6.0.3)(yaml@2.8.3))
+      starlight-sidebar-topics:
+        specifier: ^0.7.1
+        version: 0.7.1(@astrojs/starlight@0.38.3(astro@6.1.8(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@6.0.3)(yaml@2.8.3)))
       svelte:
         specifier: ^5.55.4
         version: 5.55.4
@@ -57,7 +60,7 @@ importers:
   modules/Tsfix:
     devDependencies:
       typescript:
-        specifier: ^6.0.3
+        specifier: ^6.0.2
         version: 6.0.3
 
   modules/metadata:
@@ -67,10 +70,10 @@ importers:
         version: 4.3.6
     devDependencies:
       '@types/node':
-        specifier: ^25.6.0
+        specifier: ^25.5.0
         version: 25.6.0
       typescript:
-        specifier: ^6.0.3
+        specifier: ^6.0.2
         version: 6.0.3
 
 packages:
@@ -1981,6 +1984,12 @@ packages:
       '@astrojs/starlight': '>=0.38.0'
       astro: '>=6.0.0'
 
+  starlight-sidebar-topics@0.7.1:
+    resolution: {integrity: sha512-2PBR05ZUvnKNoJtbL2u6GoE1qmQD0tFcd5+inYEJHJkx3LE2P+vlNslofTGHLtzch2XzyNbHUBQQu35bouA6NQ==}
+    engines: {node: '>=22.12.0'}
+    peerDependencies:
+      '@astrojs/starlight': '>=0.38.0'
+
   stream-replace-string@2.0.0:
     resolution: {integrity: sha512-TlnjJ1C0QrmxRNrON00JvaFFlNh5TTG00APw23j74ET7gkQpTASi6/L2fuiav8pzK715HXtUeClpBTw2NPSn6w==}
 
@@ -3055,7 +3064,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 24.12.2
+      '@types/node': 25.6.0
 
   '@types/trusted-types@2.0.7': {}
 
@@ -4661,6 +4670,11 @@ snapshots:
       yaml: 2.8.3
     transitivePeerDependencies:
       - supports-color
+
+  starlight-sidebar-topics@0.7.1(@astrojs/starlight@0.38.3(astro@6.1.8(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@6.0.3)(yaml@2.8.3))):
+    dependencies:
+      '@astrojs/starlight': 0.38.3(astro@6.1.8(@types/node@25.6.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(typescript@6.0.3)(yaml@2.8.3))
+      picomatch: 4.0.4
 
   stream-replace-string@2.0.0: {}
 

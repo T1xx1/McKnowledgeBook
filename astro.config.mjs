@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 import starlightImageZoom from 'starlight-image-zoom';
 import starlightLinksValidator from 'starlight-links-validator';
+import starlightSidebarTopics from 'starlight-sidebar-topics';
 
 // https://astro.build/config
 export default defineConfig({
@@ -48,62 +49,6 @@ export default defineConfig({
 					href: 'https://threads.net/@modpackker',
 				},
 			],
-			sidebar: [
-				{
-					label: 'Minecraft',
-					items: [
-						'minecraft',
-						'vanilla',
-						'edition',
-						'gameplay',
-						'environment',
-						'versions',
-						'launcher',
-						/* technical */
-						'identifier',
-						'command',
-						'seed',
-						'worldgeneration',
-						'nbt',
-						'structure',
-						'lighting',
-						/* exts */
-						'resourcepack',
-						'datapack',
-						'vibrantvisuals',
-						/* tools */
-						'tools',
-						'minecraftwiki',
-						/*  */
-						'misc',
-					],
-				},
-				{
-					label: 'Modding',
-					items: [
-						'modding',
-						'minecraftsobfuscatedcodebase',
-						'moddingenvironment',
-						/*  */
-						'projecttype',
-						'loader',
-						'modpack',
-						'mod',
-						'shader',
-						'plugin',
-						'serverengine',
-						'proxyserver',
-						/* tech */
-						'schematic',
-						/* tools */
-						'moddingtools',
-						'modrinth',
-						'modpackker',
-						/*  */
-						'moddingmisc',
-					],
-				},
-			],
 			editLink: {
 				baseUrl: 'https://github.com/modpackker/mcknowledgebook/edit/main/',
 			},
@@ -111,7 +56,71 @@ export default defineConfig({
 			components: {
 				PageTitle: './src/components/pagetitle.astro',
 			},
-			plugins: [starlightImageZoom(), starlightLinksValidator()],
+			plugins: [
+				starlightSidebarTopics([
+					{
+						id: 'vanilla',
+						label: 'Vanilla',
+						link: '/minecraft',
+						items: [
+							'minecraft',
+							{
+								label: 'Baseline',
+								items: ['vanilla', 'edition', 'gameplay', 'environment', 'versions'],
+							},
+							'launcher',
+							{
+								label: 'Technical',
+								items: [
+									'identifier',
+									'command',
+									'seed',
+									'worldgeneration',
+									'nbt',
+									'structure',
+									'lighting',
+								],
+							},
+							/* exts */
+							{
+								label: 'Project types',
+								items: ['resourcepack', 'datapack'],
+							},
+							'vibrantvisuals',
+							{
+								label: 'Tools',
+								items: ['tools', 'minecraftwiki'],
+							},
+							'misc',
+						],
+					},
+					{
+						id: 'modding',
+						label: 'Modding',
+						link: '/modding',
+						items: [
+							'modding',
+							'minecraftsobfuscatedcodebase',
+							'moddingenvironment',
+							{
+								label: 'Loaders',
+								items: ['loader', 'serverengine', 'proxyserver'],
+							},
+							{
+								label: 'Project types',
+								items: ['projecttype', 'modpack', 'mod', 'shader', 'plugin', 'schematic'],
+							},
+							{
+								label: 'Tools',
+								items: ['moddingtools', 'modrinth', 'modpackker'],
+							},
+							'moddingmisc',
+						],
+					},
+				]),
+				starlightImageZoom(),
+				starlightLinksValidator(),
+			],
 		}),
 	],
 });
