@@ -105,10 +105,6 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'McKnowledgeBook',
-					items: ['why'],
-				},
-				{
 					label: '📦 Modpackker',
 					link: 'https://modpackker.vercel.app',
 				},
