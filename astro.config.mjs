@@ -106,7 +106,7 @@ export default defineConfig({
 				},
 				{
 					label: 'McKnowledgeBook',
-					items: ['why', 'tech'],
+					items: ['why'],
 				},
 				{
 					label: '📦 Modpackker',
