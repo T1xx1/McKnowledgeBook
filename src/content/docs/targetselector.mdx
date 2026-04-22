@@ -2,21 +2,24 @@
 topic: vanilla
 title: Target selector
 aliases:
-  - Target selectors
-lastUpdated: 2025-05-26
+    - Target selectors
+topics:
+    - label: Commands
+      link: /command
+lastUpdated: 2026-04-22
 ---
 
-import Edition from '../components/edition.astro';
+import Edition from '~/components/edition.astro';
 import Wiki from '~/components/wiki.astro';
 
 Target selectors are the `@` keywords used in [Commands](/command) to target specific players or entities.
 
-| Scope                              | Entities                   | Players |
-| ---------------------------------- | -------------------------- | ------- |
-| All                                | `@e`                       | `@a`    |
-| The nearest from command execution | `@n` <Edition type="je" /> | `@p`    |
-| The one executing the command      | `@s`                       |         |
-| Random                             |                            | `@r`    |
+| Scope                          | Entities                   | Players |
+| ------------------------------ | -------------------------- | ------- |
+| All                            | `@e`                       | `@a`    |
+| Nearest from command execution | `@n` <Edition type="je" /> | `@p`    |
+| The one executing the command  | `@s`                       |         |
+| Random                         |                            | `@r`    |
 
 ---
 

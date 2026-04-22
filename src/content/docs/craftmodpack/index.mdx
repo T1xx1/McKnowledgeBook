@@ -1,0 +1,59 @@
+---
+topic: modding
+title: Craft a modpack
+aliases:
+    - Craft modpacks
+topics:
+    - label: Craft
+      link: /craft
+lastUpdated: 2026-04-22
+---
+
+import { Steps } from '@astrojs/starlight/components';
+
+<Steps>
+
+1. Go to [Modpackker](https://modpackker.vercel.app/auth) and login with Google or GitHub
+
+    ![](./modpackkerauth.webp)
+
+2. In the dashboard, click "New" and "New modpack"
+
+    ![](./modpackkernew.webp)
+
+3. In the top bar on the right, select [Gameplay](/gameplay), [Environment](/environment), [Version](/version), [Mod loader](/modloader) and [Shader loader](/shaderloader)
+
+    ![](./modpackkereditorbar.webp)
+
+4. Click "Add projects" and add all the projects you want
+
+    ![](./modpackkeraddprojects.webp)
+
+5. Check if your projects are compatible using the editor
+
+    ![](./modpackkereditor.webp)
+
+    :::note
+    Incompatible projects will not be included in your modpack, you can remove them if you want, but keeping them in will make things easier when they'll get an update and become compatible. In this case toggle the switch on the right to disable them.
+    :::
+
+6. When you're satisfied with your modpack, click "Export", and chose the format
+
+    ![](./modpackkerexport.webp)
+
+    :::note
+    Your modpack is automatically saved in your account and displayed in your dashboard
+    :::
+
+</Steps>
+
+:::note
+Adding many [Mods](/mod) and [Datapacks](/datapack) to a [Modpack](/modpack) may create compatibility issues during [Gameplay](/gameplay).
+Those problems can only be resolved by creating a [custom datapack](/craftdatapack).
+:::
+
+---
+
+#### Related
+
+- [Craft a datapack](/craftdatapack)

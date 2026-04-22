@@ -1,0 +1,95 @@
+---
+/* https://github.com/withastro/starlight/blob/main/packages/starlight/components/PageTitle.astro */
+
+import { Icon } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+import web from '~/assets/web.svg?raw';
+
+import Link from '~/components/link.astro';
+
+const { title, aliases, icon, topics, links } = Astro.locals.starlightRoute.entry.data;
+---
+
+<div class="flex flex-col gap-1.5">
+	<!-- title -->
+	<h1 id="_top" class="flex items-center gap-2.5">
+		{
+			icon && (
+				<>
+					{typeof icon === 'string' ?
+						<img src={icon} alt="Icon" class="size-10" />
+					:	<Image src={icon} alt="Icon" class="size-10" />}
+				</>
+			)
+		}
+
+		<span>{title}</span>
+	</h1>
+
+	<!-- aliases -->
+	<div class="flex flex-wrap gap-1.5">
+		{
+			aliases &&
+				aliases.map((alias) => {
+					return (
+						![title, `${title}s`].includes(alias) && (
+							<span class="text-sm text-gray-500">{alias}</span>
+						)
+					);
+				})
+		}
+	</div>
+
+	<div class="flex items-center justify-between">
+		<!-- topics -->
+		<div class="flex flex-wrap gap-1.5">
+			{
+				topics &&
+					topics.map((topic) => {
+						return (
+							<Link href={topic.link} class="text-primary">
+								{topic.label}
+							</Link>
+						);
+					})
+			}
+		</div>
+
+		<!-- links -->
+
+		{
+			links && (
+				<div class="flex gap-1">
+					{links.website && (
+						<Link href={links.website} class="*:size-5">
+							<Fragment set:html={web} />
+						</Link>
+					)}
+					{links.discord && (
+						<Link href={links.discord} class="text-primary">
+							<Icon name="discord" class="size-5" />
+						</Link>
+					)}
+					{links.github && (
+						<Link href={links.github} class="text-primary">
+							<Icon name="github" class="size-5" />
+						</Link>
+					)}
+				</div>
+			)
+		}
+	</div>
+</div>
+
+<style>
+	@layer starlight.core {
+		h1 {
+			margin-top: 1rem;
+			font-size: var(--sl-text-h1);
+			line-height: var(--sl-line-height-headings);
+			font-weight: 600;
+			color: var(--sl-color-white);
+		}
+	}
+</style>

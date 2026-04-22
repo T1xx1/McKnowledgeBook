@@ -1,8 +1,23 @@
 ---
 topic: modding
 title: Legacy Fabric
-lastUpdated: 2025-08-02
-icon: ~/assets/legacyfabric.svg
+icon: ~/assets/loaders/legacyfabric.svg
+links:
+    website: https://legacyfabric.net
+topics:
+    - label: Mod loader
+      link: /modloader
+lastUpdated: 2026-04-22
 ---
 
-#### [Website](https://legacyfabric.net)
+import { legacyfabricBindings } from '@mc/metadata';
+
+import Bindings from '~/components/bindings.svelte';
+
+import NoContent from '~/components/nocontent.astro';
+
+<NoContent />
+
+## Bindings
+
+<Bindings client:load type="project" data={legacyfabricBindings} />

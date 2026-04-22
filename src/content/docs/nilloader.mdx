@@ -1,8 +1,22 @@
 ---
 topic: modding
 title: NilLoader
-lastUpdated: 2025-08-02
-icon: ~/assets/nilloader.svg
+icon: ~/assets/loaders/nilloader.svg
+links:
+    github: https://github.com/unascribed/NilLoader
+topics:
+    - label: Mod loader
+      link: /modloader
+lastUpdated: 2026-04-22
 ---
 
-#### [Website](https://github.com/unascribed/NilLoader)
+import { nilloaderBindings } from '@mc/metadata';
+
+import Bindings from '~/components/bindings.svelte';
+import NoContent from '~/components/nocontent.astro';
+
+<NoContent />
+
+## Bindings
+
+<Bindings client:load data={nilloaderBindings} />

@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+
+import discord from '~/assets/logos/discord.svg';
+
+type Props = {
+	id: string;
+};
+
+const { id } = Astro.props;
+---
+
+<a
+	href={`https://discord.gg/${id}`}
+	target="_blank"
+	class="relative bottom-[-7px] mx-[1px] w-fit inline-flex gap-1.5 items-center text-pink-300 hover:brightness-150"
+>
+	<Image src={discord} alt="Discord" class="size-5" />
+
+	<span>Discord</span>
+</a>
+---

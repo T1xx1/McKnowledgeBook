@@ -1,10 +1,20 @@
 ---
 topic: modding
 title: BTA
-lastUpdated: 2025-08-02
-icon: ~/assets/bta.svg
+icon: ~/assets/loaders/bta.svg
+topics:
+    - label: Mod loader
+      link: /modloader
+lastUpdated: 2026-04-22
 ---
 
+import { btaBindings } from '@mc/metadata';
+
+import Bindings from '~/components/bindings.svelte';
 import NoContent from '~/components/nocontent.astro';
 
 <NoContent />
+
+## Bindings
+
+<Bindings client:load data={btaBindings} />

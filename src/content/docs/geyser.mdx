@@ -1,0 +1,20 @@
+---
+topic: modding
+title: Geyser
+icon: ~/assets/loaders/geyser.svg
+topics:
+    - label: Proxy server
+      link: /proxyserver
+lastUpdated: 2026-04-22
+---
+
+import { geyserBindings } from '@mc/metadata';
+
+import Bindings from '~/components/bindings.svelte';
+import NoContent from '~/components/nocontent.astro';
+
+<NoContent />
+
+## Bindings
+
+<Bindings client:load data={geyserBindings} />

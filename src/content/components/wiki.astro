@@ -1,4 +1,6 @@
 ---
+import minecraftwiki from '~/assets/logos/minecraftwiki.ico';
+
 type Props = {
 	slug: string;
 	name: string;
@@ -12,11 +14,7 @@ const { slug, name } = Astro.props;
 	target="_blank"
 	class="relative bottom-[-7px] mx-[1px] w-fit inline-flex gap-1.5 items-center text-pink-300 hover:brightness-150"
 >
-	<img
-		src="https://minecraft.wiki/images/Favicon.ico"
-		alt="Minecraft Wiki"
-		class="size-5"
-	/>
+	<img src={minecraftwiki} alt="Minecraft Wiki" class="size-5" />
 
 	<span>{name}</span>
 </a>

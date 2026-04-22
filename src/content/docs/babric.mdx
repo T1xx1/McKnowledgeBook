@@ -1,8 +1,22 @@
 ---
 topic: modding
 title: Babric
-lastUpdated: 2025-08-02
-icon: ~/assets/babric.svg
+icon: ~/assets/loaders/babric.svg
+topics:
+    - label: Mod loader
+      link: /modloader
+links:
+    website: https://babric.github.io
+lastUpdated: 2026-04-22
 ---
 
-#### [Website](https://babric.github.io)
+import { babricBindings } from '@mc/metadata';
+
+import Bindings from '~/components/bindings.svelte';
+import NoContent from '~/components/nocontent.astro';
+
+<NoContent />
+
+## Bindings
+
+<Bindings client:load data={babricBindings} />

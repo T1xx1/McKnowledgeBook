@@ -53,7 +53,7 @@
 			<tr>
 				<th>
 					<a href="/minecraft">Minecraft</a>
-					<a href="/versions">Version</a>
+					<a href="/version">Version</a>
 				</th>
 				{#if type === 'loader'}
 					<th>Binding</th>

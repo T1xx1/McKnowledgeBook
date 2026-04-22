@@ -2,15 +2,60 @@
 topic: modding
 title: Mrpack
 aliases:
-  - Modrinth pack
-lastUpdated: 2026-01-01
+    - Mrpack format
+    - Modrinth pack
+    - Modrinth pack format
+topics:
+    - label: Modrinth
+      link: /modrinth
+lastUpdated: 2026-04-21
 ---
 
-import NoContent from '~/components/nocontent.astro';
+Mrpack is a custom file format made by [Modrinth](/modrinth) to store [Modpacks](/modpack) metadata, mods and mod configurations.
 
-Mrpack is a custom format to store [Modpacks](/modpack) made by the [Modrinth](/modrinth) team.
+## Structure
 
-<NoContent />
+Any mrpack file is a zip (MIME type application/x-modrinth-modpack+zip) with an `.mrpack` extension.
+
+The modpack metadata is stored in the `modrinth.index.json` with a `UTF-8` encoding in the zip root.
+
+The zip can also contain 3 folders:
+
+- `overrides` • mods configuration that should be installed in the Minecraft instance upon installation
+- `client-overrides` • client side mod configurations
+- `server-overrides` • server side mod configurations
+
+## `modrinth.index.json`
+
+```ts
+type Mrpack = {
+	formatVersion: 1;
+	game: 'minecraft';
+	versionId: string;
+	name: string;
+	summary?: string;
+	files: {
+		path: string;
+		env: {
+			client: 'required';
+			server: 'required';
+		};
+		fileSize: number;
+		downloads: string[];
+		hashes: {
+			sha1: string;
+			sha512: string;
+		};
+	}[];
+	dependencies: {
+		minecraft: string;
+		'fabric-loader'?: string;
+		forge?: string;
+		neoforge?: string;
+		'quilt-loader'?: string;
+	};
+};
+```
 
 ---
 

@@ -3,6 +3,8 @@ import { Image } from 'astro:assets';
 
 import icon from '~/../assets/favicon.webp';
 import modpackker from '~/../assets/modpackker.webp';
+
+import Link from '~/components/link.astro';
 ---
 
 <footer class="not-content flex flex-col gap-2 sm:flex-row sm:gap-8">
@@ -15,7 +17,9 @@ import modpackker from '~/../assets/modpackker.webp';
 
 		<div>
 			<span>Built with 💚 by </span>
-			<a href="https://t1xx1.vercel.app" class="text-[#00ff00]">T1xx1</a>
+			<Link href="https://t1xx1.vercel.app" class="text-[#00FF00]! hover:text-white!">
+				T1xx1
+			</Link>
 		</div>
 	</div>
 
@@ -26,19 +30,19 @@ import modpackker from '~/../assets/modpackker.webp';
 			<div class="pl-1 flex flex-col gap-1 items-center sm:items-start">
 				<div class="pr-3 flex items-center gap-2">
 					<Image src={modpackker} alt="Modpackker" class="size-6 rounded-none!" />
-					<a href="https://modpackker.vercel.app" class="text-primary">
+					<Link href="https://modpackker.vercel.app" class="text-primary">
 						<span>Modpackker</span>
-					</a>
+					</Link>
 				</div>
 
 				<div class="pr-3 flex items-center gap-2.5">
 					<span>❓</span>
-					<a
+					<Link
 						href="https://modpackker.notion.site/Modpackker-manual-3241e57125a580ce8581fb82ebbad149"
 						class="text-primary"
 					>
 						Manual
-					</a>
+					</Link>
 				</div>
 			</div>
 		</div>
@@ -47,12 +51,12 @@ import modpackker from '~/../assets/modpackker.webp';
 			<div class="font-semibold text-center sm:text-left">Project</div>
 
 			<div class="flex flex-col items-center sm:items-start">
-				<a
+				<Link
 					href="https://t1xx1.notion.site/333b9d9763528099a861def86036438f?v=333b9d976352801bb3f6000cb2bdedd5"
 					class="text-primary"
 				>
 					Issue tracker
-				</a>
+				</Link>
 			</div>
 		</div>
 	</div>

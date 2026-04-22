@@ -1,0 +1,22 @@
+---
+topic: modding
+title: Ornithe
+icon: ~/assets/loaders/ornithe.svg
+links:
+    website: https://ornithemc.net
+topics:
+    - label: Mod loader
+      link: /modloader
+lastUpdated: 2026-04-22
+---
+
+import { ornitheBindings } from '@mc/metadata';
+
+import Bindings from '~/components/bindings.svelte';
+import NoContent from '~/components/nocontent.astro';
+
+<NoContent />
+
+## Bindings
+
+<Bindings client:load data={ornitheBindings} />

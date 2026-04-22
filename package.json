@@ -6,7 +6,7 @@
 	},
 	"packageManager": "pnpm@10.33.0",
 	"scripts": {
-		"dev": "pnpm run modules:build && astro dev",
+		"dev": "astro dev",
 		"build": "pnpm run modules:build && astro build",
 		"format": "biome format --write",
 		"predeploy": "pnpm run build",

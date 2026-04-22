@@ -1,10 +1,20 @@
 ---
 topic: modding
 title: LiteLoader
-lastUpdated: 2025-04-29
-icon: ~/assets/liteloader.svg
+icon: ~/assets/loaders/liteloader.svg
+topics:
+    - label: Mod loader
+      link: /modloader
+lastUpdated: 2026-04-22
 ---
 
+import { liteloaderBindings } from '@mc/metadata';
+
+import Bindings from '~/components/bindings.svelte';
 import NoContent from '~/components/nocontent.astro';
 
 <NoContent />
+
+## Bindings
+
+<Bindings client:load data={liteloaderBindings} />

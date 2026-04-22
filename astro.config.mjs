@@ -21,7 +21,7 @@ export default defineConfig({
 			logo: {
 				src: './src/assets/favicon.webp',
 			},
-			description: 'The Minecraft modding Wiki.',
+			description: 'The Minecraft wiki for modding.',
 			social: [
 				{
 					icon: 'blueSky',
@@ -54,7 +54,7 @@ export default defineConfig({
 			},
 			customCss: ['./src/styles/index.css'],
 			components: {
-				PageTitle: './src/components/pagetitle.astro',
+				PageTitle: './src/components/overrides/PageTitle.astro',
 			},
 			plugins: [
 				starlightSidebarTopics([
@@ -66,32 +66,34 @@ export default defineConfig({
 							'minecraft',
 							{
 								label: 'Baseline',
-								items: ['vanilla', 'edition', 'gameplay', 'environment', 'versions'],
+								items: ['vanilla', 'edition', 'gameplay', 'environment', 'version'],
 							},
 							'launcher',
 							{
-								label: 'Technical',
-								items: [
-									'identifier',
-									'command',
-									'seed',
-									'worldgeneration',
-									'nbt',
-									'structure',
-									'lighting',
-								],
-							},
-							/* exts */
-							{
 								label: 'Project types',
-								items: ['resourcepack', 'datapack'],
+								items: ['projecttype', 'addon', 'behaviorpack', 'datapack', 'resourcepack', 'seed'],
 							},
 							'vibrantvisuals',
 							{
-								label: 'Tools',
-								items: ['tools', 'minecraftwiki'],
+								label: 'Technical',
+								items: ['identifier', 'command', 'worldgeneration', 'nbt', 'structure', 'lighting'],
 							},
-							'misc',
+							{
+								label: 'Tools',
+								items: ['fandom', 'minecraftwiki'],
+							},
+							{
+								label: 'Miscellaneous',
+								items: [
+									'besttoolsenchantments',
+									'craft',
+									'formattingcode',
+									'lighting',
+									'oresbestmininglevel',
+									'unobtainableresources',
+									'wearblocks',
+								],
+							},
 						],
 					},
 					{
@@ -103,18 +105,28 @@ export default defineConfig({
 							'minecraftsobfuscatedcodebase',
 							'moddingenvironment',
 							{
-								label: 'Loaders',
-								items: ['loader', 'serverengine', 'proxyserver'],
+								label: 'Project types',
+								items: ['projecttype', 'mod', 'modpack', 'plugin', 'schematic', 'shader'],
 							},
 							{
-								label: 'Project types',
-								items: ['projecttype', 'modpack', 'mod', 'shader', 'plugin', 'schematic'],
+								label: 'Loaders',
+								items: [
+									'loader',
+									'modloader',
+									'serverengine',
+									'shaderloader',
+									'pluginloader',
+									'proxyserver',
+								],
 							},
 							{
 								label: 'Tools',
-								items: ['moddingtools', 'modrinth', 'modpackker'],
+								items: ['modrinth', 'modpackker'],
 							},
-							'moddingmisc',
+							{
+								label: 'Miscellaneous',
+								items: ['fpsboostingmods', 'vulkanmod'],
+							},
 						],
 					},
 				]),
