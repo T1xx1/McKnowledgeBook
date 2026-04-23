@@ -8,18 +8,18 @@ aliases:
 topics:
     - label: Modrinth
       link: /modrinth
-lastUpdated: 2026-04-21
+lastUpdated: 2026-04-23
 ---
 
 Mrpack is a custom file format made by [Modrinth](/modrinth) to store [Modpacks](/modpack) metadata, mods and mod configurations.
 
 ## Structure
 
-Any mrpack file is a zip (MIME type application/x-modrinth-modpack+zip) with an `.mrpack` extension.
+Any `.mrpack` file is a ZIP (MIME type application/x-modrinth-modpack+zip) with an `.mrpack` extension.
 
 The modpack metadata is stored in the `modrinth.index.json` with a `UTF-8` encoding in the zip root.
 
-The zip can also contain 3 folders:
+The ZIP can also contain 3 folders:
 
 - `overrides` • mods configuration that should be installed in the Minecraft instance upon installation
 - `client-overrides` • client side mod configurations
