@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+
+const pages = 4;
+
+const randomPages = Object.values(await getCollection('docs'))
+	.filter((page) => {
+		return page.id !== 'index';
+	})
+	.sort(() => {
+		return Math.random() - 0.5;
+	})
+	.slice(0, pages)
+	.map((page) => {
+		return {
+			slug: `/${page.id}`,
+			title: page.data.title,
+			topic: page.data.topic,
+			preview: page.body.split('\r\n').filter((line) => {
+				return (
+					line !== '' &&
+					!line.startsWith('import') &&
+					!line.startsWith('##') &&
+					!line.startsWith('###') &&
+					!line.startsWith('---') &&
+					!line.startsWith('<') &&
+					!line.startsWith(':::') &&
+					!line.startsWith('!')
+				);
+			})[0],
+		};
+	});
+---
+
+<div class="grid gap-4 sm:grid-cols-2">
+	{
+		randomPages.map((page) => (
+			<a
+				href={page.slug}
+				class="not-content no-underline block border border-(--sl-color-gray-5) rounded-lg p-4 shadow-(--sl-shadow-sm) hover:bg-(--sl-color-gray-6) hover:border-(--sl-color-gray-2)"
+			>
+				<div class="text-[10px] text-primary font-semibold uppercase">{page.topic}</div>
+				<div class="text-lg font-semibold mb-2">{page.title}</div>
+				<span
+					class="text-sm text-(--sl-color-gray-3) dark:text-gray-400"
+					set:html={page.preview}
+				/>
+			</a>
+		))
+	}
+</div>

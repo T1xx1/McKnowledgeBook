@@ -16,14 +16,21 @@ editUrl: false
 lastUpdated: 2026-04-23
 ---
 
-import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
 
 import Footer from './footer.astro';
+import Randoms from './Randoms.astro';
 
-<CardGrid>
-	<LinkCard title="Minecraft" href="/minecraft" />
-	<LinkCard title="Modding" href="/modding" />
-</CardGrid>
+### Featured
+
+<div class="not-content grid gap-4 sm:grid-cols-2">
+	<LinkCard title="Architecture" href="/architecture" description="Environment architecture" />
+	<LinkCard title="Wear blocks" href="/wearblocks" description="Wear any block on your head" />
+</div>
+
+### Random
+
+<Randoms />
 
 <br />
 <br />
