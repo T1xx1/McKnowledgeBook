@@ -1,10 +1,6 @@
 {
 	"name": "mcknowledgebook",
 	"type": "module",
-	"engines": {
-		"node": ">=24"
-	},
-	"packageManager": "pnpm@11.3.0",
 	"scripts": {
 		"dev": "astro dev",
 		"build": "pnpm run modules:build && astro build",
@@ -29,5 +25,9 @@
 		"tailwindcss": "^4.2.2",
 		"turbo": "^2.9.6",
 		"typescript": "^6.0.3"
-	}
+	},
+	"engines": {
+		"node": ">=24"
+	},
+	"packageManager": "pnpm@11.3.0"
 }
