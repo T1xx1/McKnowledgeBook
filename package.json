@@ -18,6 +18,7 @@
 		"@astrojs/svelte": "^8.0.5",
 		"@biomejs/biome": "^2.4.12",
 		"@mc/metadata": "workspace:*",
+		"@t1xx1/tsfix": "^1.0.0",
 		"@tailwindcss/vite": "^4.2.2",
 		"astro": "^6.1.8",
 		"sharp": "^0.34.5",
@@ -26,7 +27,6 @@
 		"starlight-sidebar-topics": "^0.7.1",
 		"svelte": "^5.55.4",
 		"tailwindcss": "^4.2.2",
-		"tsfix": "workspace:*",
 		"turbo": "^2.9.6",
 		"typescript": "^6.0.3"
 	}
