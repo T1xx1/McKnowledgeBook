@@ -36,7 +36,7 @@ export default defineConfig({
 				{
 					icon: 'github',
 					label: 'GitHub',
-					href: 'https://github.com/modpackker/mcknowledgebook',
+					href: 'https://github.com/t1xx1/mcknowledgebook',
 				},
 				{
 					icon: 'instagram',
@@ -50,7 +50,7 @@ export default defineConfig({
 				},
 			],
 			editLink: {
-				baseUrl: 'https://github.com/modpackker/mcknowledgebook/edit/main/',
+				baseUrl: 'https://github.com/t1xx1/mcknowledgebook/edit/main/',
 			},
 			customCss: ['./src/styles/index.css'],
 			components: {

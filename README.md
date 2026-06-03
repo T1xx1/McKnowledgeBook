@@ -30,7 +30,7 @@ McKnowledgeBook is a custom-written documentation site dedicated to Minecraft mo
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/modpackker/mcknowledgebook.git
+git clone https://github.com/unmodding/mcknowledgebook.git
 cd mcknowledgebook
 ```
 

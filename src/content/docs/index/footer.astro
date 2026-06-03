@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 
 import icon from '~/../assets/favicon.webp';
 import modpackker from '~/../assets/modpackker.webp';
+import unmodding from '~/../assets/unmodding.webp';
 
 import Link from '~/components/link.astro';
 ---
@@ -29,7 +30,19 @@ import Link from '~/components/link.astro';
 
 			<div class="pl-1 flex flex-col gap-1 items-center sm:items-start">
 				<div class="pr-3 flex items-center gap-2">
+					<Image src={unmodding} alt="Unmodding" class="size-6 rounded-none!" />
+
+					<Link
+						href="https://modpackker.notion.site/Unmodding-3241e57125a580ce8581fb82ebbad149"
+						class="text-primary"
+					>
+						<span>Unmodding</span>
+					</Link>
+				</div>
+
+				<div class="pr-3 flex items-center gap-2">
 					<Image src={modpackker} alt="Modpackker" class="size-6 rounded-none!" />
+
 					<Link href="https://modpackker.vercel.app" class="text-primary">
 						<span>Modpackker</span>
 					</Link>
@@ -37,6 +50,7 @@ import Link from '~/components/link.astro';
 
 				<div class="pr-3 flex items-center gap-2.5">
 					<span>❓</span>
+
 					<Link
 						href="https://modpackker.notion.site/Modpackker-manual-3241e57125a580ce8581fb82ebbad149"
 						class="text-primary"
