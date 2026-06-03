@@ -1,8 +1,9 @@
 packages:
   - modules/*
 
-allowBuilds:
-  esbuild: set this to true or false
-  sharp: set this to true or false
-
+blockExoticSubdeps: true
 minimumReleaseAge: 1440 # 1 day
+
+allowBuilds:
+  esbuild: false
+  sharp: false
