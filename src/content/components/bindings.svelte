@@ -5,7 +5,7 @@
 		mcLegacyVersions,
 		type Bindings,
 		type ProjectBindings,
-	} from '@mc/metadata';
+	} from '@unmodding/metadata';
 
 	import Button from '~/components/button.svelte';
 	import Switch from '~/components/switch.svelte';

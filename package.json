@@ -3,19 +3,18 @@
 	"type": "module",
 	"scripts": {
 		"dev": "astro dev",
-		"build": "pnpm run modules:build && astro build",
+		"build": "astro build",
 		"format": "biome format --write",
-		"predeploy": "pnpm run build",
-		"modules:build": "turbo run build"
+		"predeploy": "pnpm run build"
 	},
 	"devDependencies": {
 		"@astrojs/starlight": "^0.39.3",
 		"@astrojs/starlight-tailwind": "^5.0.0",
 		"@astrojs/svelte": "^8.1.2",
 		"@biomejs/biome": "^2.4.16",
-		"@mc/metadata": "workspace:*",
 		"@t1xx1/tsfix": "^1.1.0",
 		"@tailwindcss/vite": "^4.3.0",
+		"@unmodding/metadata": "^1.0.0",
 		"astro": "^6.4.3",
 		"sharp": "^0.34.5",
 		"starlight-image-zoom": "^0.14.2",
@@ -23,7 +22,6 @@
 		"starlight-sidebar-topics": "^0.7.1",
 		"svelte": "^5.56.1",
 		"tailwindcss": "^4.3.0",
-		"turbo": "^2.9.16",
 		"typescript": "^6.0.3"
 	},
 	"engines": {

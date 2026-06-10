@@ -50,7 +50,7 @@ The site will be available at `http://localhost:4321`
 
 The project uses a monorepo structure with custom modules:
 
-- **@mc/metadata**: Provides loaders and utilities for Minecraft metadata
+- **@unmodding/metadata**: Provides loaders and utilities for Minecraft metadata
 - **tsfix**: TypeScript utility types for better type safety
 
 ## 🤝 Contributing
